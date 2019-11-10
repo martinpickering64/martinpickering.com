@@ -1,0 +1,11 @@
+{{ partial "header" .}}
+
+<h1>Oops!</h1>
+
+<p>
+    I'm really sorry but it appears that the page you are looking for has been recycled already.
+    <img alt="HTTP 404 - Not Found" title="HTTP 404 - Not Found!" class="gopher" src="{{ "images/404-page-200.jpg" | relURL }}" />
+</p>
+<p>You could go back to where you were or head straight to my <a href="{{ "/" | relURL }}">Home Page</a>...<br /><a href="{{ "/" | relURL }}">{{ "/" | absURL }}</a></p>
+
+{{ partial "footer" .}}
