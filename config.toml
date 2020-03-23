@@ -23,7 +23,7 @@ pygmentsCodeFences=true
 [params]
   breadcrumb = true
   accentColor = "#FD3519"
-  mainSections = ['portfolio'] # values: ['post', 'portfolio'] only accept one section, to be displayed bellow 404
+  mainSections = ['posts'] # values: ['post', 'portfolio'] only accept one section, to be displayed below 404
 
 [params.notFound]
   gopher = "/images/gopher.png" # checkout https://gopherize.me/
@@ -78,12 +78,12 @@ pygmentsCodeFences=true
 #  url = "/portfolio/"
 #  weight = -110
 
-#[[menu.main]]
-#  identifier = "blog"
-#  name = "Post"
-#  title = "Blog section"
-#  url = "/post/"
-#  weight = -100
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog Posts"
+  title = "Blog section"
+  url = "/posts/"
+  weight = -100
 
 [sitemap]
   changefreq = "monthly"
