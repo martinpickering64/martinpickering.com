@@ -46,7 +46,7 @@ backwards compatible API additions/changes increment the minor version, and back
 changes increment the major version. 
 
 Under this scheme, version numbers and the way they change 
-<u style="cursor:help" " title="...and this is where the word semantic comes in">convey meaning</u> about 
+<u style="cursor:help" title="...and this is where the word semantic comes in">convey meaning</u> about 
 the underlying code and what has been modified from one version to the next.
  
 ### Semantic Versioning Specification (SemVer) 

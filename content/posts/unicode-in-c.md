@@ -4,7 +4,7 @@ summary: "Given the variety of human languages on this planet, text is a complex
 dealing with the various scripts of the world. This is because they think of the numerous related software 
 problems in the area, instead of focusing on what they can do with their code to help."
 date: 2018-05-02T14:07:51Z
-draft: true
+draft: false
 ---
 ## Encoding text 
 
