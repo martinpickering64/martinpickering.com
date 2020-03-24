@@ -1,6 +1,6 @@
 ---
 title: "Task-based Apis"
-subtitle: "A treatise on behaviourally complete API design "
+subtitle: "A treatise on the design of behaviourally complete APIs"
 summary: "This Post is concerned with a possble future direction of Application Programming Interface (API) Design. It asserts that we can achieve better APIs than have hitherto been delivered. It proposes that there is much that we can learn from a small number of key design disciplines and design patterns; DDD, CQRS, Event Sourcing, Naked Objects, SOLID."
 
 date: 2018-03-06T15:08:15Z
@@ -35,7 +35,7 @@ It is written in response to my experience of using and creating APIs and the ev
 several APIs that have been created (_often left unfinished_) by other adventures. It also 
 echoes the cry... 
 
->>Surely there is a better way? 
+> Surely there is a better way? 
 
 I characterise the pain points experienced and uncovers some of their root causes. I offers a 
 design philosophy expressed as a set of core values that could be applied to the design of APIs, 
@@ -344,7 +344,7 @@ they lead to simpler and more robust solutions
 
 The most important, first amongst equals, of our core values for APIs is...
 
->> Our APIs must allow the true intent of their use to be fully and clearly expressed 
+> Our APIs must allow the true intent of their use to be fully and clearly expressed 
 
 ### APIs must express intent 
 
@@ -382,11 +382,11 @@ any implementation and administration of Authorisation needs.
 
 Rather than directly answer this question, consider a different question...
 
->> What is the intent of the SaveOrder Method of a SalesOrder Service? 
+> What is the intent of the SaveOrder Method of a SalesOrder Service? 
 
 Answers are numerous, complex and conditional and is the consequence of a loss of the true intent. 
 
->> But so what? 
+> But so what? 
 
 The consequences of the doubt and uncertainty introduced by losing the true intent include: 
 

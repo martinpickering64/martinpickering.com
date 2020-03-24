@@ -5,6 +5,7 @@
     {{ with .Params.subtitle }}
     <p style="font-size:1.25em">{{ . }}</p>
     {{ end }}
+    {{ partial "post/information" . }}
     <p>{{ .Summary }}</p>
     <div class="read-more">
         <a alt="{{.Title}}" href="{{.Permalink}}" />{{ partial "svg" (dict "iconName" "read" "size" "18px")}}
