@@ -3,7 +3,7 @@ languageCode = "en-gb"
 title = "Martin Pickering - Personal Web"
 theme = "personal-web"
 copyright="Martin Pickering"
-googleAnalytics = ""
+googleAnalytics = "UA-149508279-2"
 enableEmoji=true
 enableRobotsTXT=true
 pygmentsUseClasses=true
@@ -93,7 +93,7 @@ pygmentsCodeFences=true
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
-    disable = true
+    disable = false
     respectDoNotTrack = true
     useSessionStorage = false
   [privacy.twitter]
