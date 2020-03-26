@@ -47,7 +47,7 @@ The messaging substrate is typically one of two types:
 
 {{< figure src="/posts/images/federated-message-bus.png" caption="figure 1 the federated message bus" >}}
 
-The Federated Bus uses a _store and forward_ technique that reduces temporal coupling between the Client and the Message Substrate and also increases the overall resilience of the substrate. An example of this type of messaging substrate is Microsoft’s MSMQ. 
+The Federated Bus uses a _store and forward_ technique that reduces temporal coupling between the Client and the Message Substrate and also increases the overall resilience of the substrate. An example of this type of messaging substrate is Microsoft's MSMQ. 
 
 ### The Message Broker 
 

@@ -101,7 +101,7 @@ as to why they got into trouble with SOAP Web Services and API Design in the fir
 The outcome was solutions, which did random stuff using HTTP and still delivered 
 dysfunctional APIs. _Oh, deep joy!_
 
-### An APIs lack intent 
+### APIs lack intent 
 Designing an API is not easy. In fact it is hard to do. 
 
 There has been little assistance for designers and any assistance offered tended to be both 
@@ -330,7 +330,7 @@ API design will stand us in good stead. These values are:
 * JSON is preferred over XML 
 * JSON and XML Message designs should always be expressed using JSON Schema and XML Schema Definitions 
 * [<span 
-title="Swagger is the world’s largest framework of API developer tools for the OpenAPI Specification (OAS), 
+title="Swagger is the world's largest framework of API developer tools for the OpenAPI Specification (OAS), 
 enabling development across the entire API lifecycle, from design and documentation, to test and deployment.">SWAGGER</span>](https://swagger.io/) 
 is a preferred way to distribute documentation for our APIs 
 * Identification and Authentication should be present and active from the outset 
@@ -480,7 +480,7 @@ exhibits less data coupling.
 
 As both operations mutate the state of an existing Light then <u style="cursor:help" 
 title="One could argue for the use of HTTP PATCH instead of HTTP PUT, but 
-most developers’ minds start to explode at that point, just like in 
+most developers' minds start to explode at that point, just like in 
 the film Mars Attacks">HTTP PUT</u> is the 
 appropriate Verb choice. Accordingly, the successful return code is 204, the 
 change of state has occurred and signifies the use of the Request-Response message 
