@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $desc := "" }}
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
         <div class="post-item-wrapper post-item-wrapper-no-hover">
@@ -11,13 +12,31 @@
             </div>
         </div>
         {{- range .Data.Pages -}}
+        {{ $desc = "" }}
+        {{ if .Params.summary }}
+        {{ $desc = .Params.summary }}
+        {{ else if .Params.abstract }}
+        {{ $desc = .Params.abstract }}
+        {{ else if .IsPage }}
+        {{ $desc = .Summary }}
+        {{ else if site.Params.description }}
+        {{ $desc = site.Params.description }}
+        {{ else }}
+        {{ $desc = .Description }}
+        {{ end }}
         <a href="{{ .RelPermalink }}" class="a-block">
             <div class="post-item-wrapper">
                 <div class="post-item post-item-no-gaps">
                     <article class="post-item-info-wrapper">
                         <header class="post-item-title">
                             <h1>{{.Title}}</h1>
+                            {{ with .Params.subtitle }}
+                            <p class="lead">{{ . }}</p>
+                            {{ end }}
                         </header>
+                        <div class="post-item-summary">
+                            {{$desc}}
+                        </div>
                         <div class="post-item-meta">
                             <span class="reading-time">
                                 {{ partial "svg" (dict "iconName" "clock" "size" "18px")}}

@@ -1,11 +1,22 @@
-
 {{ define "main" }}
-
+{{ $desc := "" }}
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-no-background">
         {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
         {{ range $paginator.Pages }}
         {{ if eq .Type "posts" }}
+        {{ $desc = "" }}
+        {{ if .Params.summary }}
+        {{ $desc = .Params.summary }}
+        {{ else if .Params.abstract }}
+        {{ $desc = .Params.abstract }}
+        {{ else if .IsPage }}
+        {{ $desc = .Summary }}
+        {{ else if site.Params.description }}
+        {{ $desc = site.Params.description }}
+        {{ else }}
+        {{ $desc = .Description }}
+        {{ end }}
         {{if and (.IsPage) (.Params.date)}}
         <a href="{{.Permalink}}" class="a-block">
             <div class="post-item-wrapper">
@@ -13,9 +24,12 @@
                     <div class="post-item-info-wrapper">
                         <header class="post-item-title">
                             <h1>{{.Title}}</h1>
+                            {{ with .Params.subtitle }}
+                            <p class="lead">{{ . }}</p>
+                            {{ end }}
                         </header>
                         <div class="post-item-summary">
-                            {{.Description}}
+                            {{$desc}}
                         </div>
                         <div class="post-item-meta">
                             <span class="reading-time">

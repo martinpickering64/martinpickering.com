@@ -1,46 +1,65 @@
 {{ define "main" }}
+{{ $desc := "" }}
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
         {{ range .Paginator.Pages.GroupByDate "2006" }}
-            <a class="a-block">
-                <div class="post-item-wrapper post-item-wrapper-no-hover">
-                    <div class="post-item post-item-no-gaps">
-                        <div class="post-item-info-wrapper">
-                            <div class="post-item-title post-item-title-small year">
-                                {{ .Key }}
-                            </div>
+        <a class="a-block">
+            <div class="post-item-wrapper post-item-wrapper-no-hover">
+                <div class="post-item post-item-no-gaps">
+                    <div class="post-item-info-wrapper">
+                        <div class="post-item-title post-item-title-small year">
+                            {{ .Key }}
                         </div>
                     </div>
                 </div>
-            </a>
-            {{ range .Pages }}
-            <a href="{{ .RelPermalink }}" class="a-block">
-                <div class="post-item-wrapper">
-                    <div class="post-item post-item-no-gaps">
-                        <article class="post-item-info-wrapper">
-                            <header class="post-item-title">
-                                <h1>{{.Title}}</h1>
-                            </header>
-                            <div class="post-item-meta">
-                                <span class="reading-time">
-                                    {{ partial "svg" (dict "iconName" "clock" "size" "18px")}}
-                                    <span>{{ .ReadingTime }} {{ "minute" | pluralize }}</span>
-                                </span>
+            </div>
+        </a>
+        {{ range .Pages }}
+        {{ $desc = "" }}
+        {{ if .Params.summary }}
+        {{ $desc = .Params.summary }}
+        {{ else if .Params.abstract }}
+        {{ $desc = .Params.abstract }}
+        {{ else if .IsPage }}
+        {{ $desc = .Summary }}
+        {{ else if site.Params.description }}
+        {{ $desc = site.Params.description }}
+        {{ else }}
+        {{ $desc = .Description }}
+        {{ end }}
+        <a href="{{ .RelPermalink }}" class="a-block">
+            <div class="post-item-wrapper">
+                <div class="post-item post-item-no-gaps">
+                    <article class="post-item-info-wrapper">
+                        <header class="post-item-title">
+                            <h1>{{.Title}}</h1>
+                            {{ with .Params.subtitle }}
+                            <p class="lead">{{ . }}</p>
+                            {{ end }}
+                        </header>
+                        <div class="post-item-summary">
+                            {{$desc}}
+                        </div>
+                        <div class="post-item-meta">
+                            <span class="reading-time">
+                                {{ partial "svg" (dict "iconName" "clock" "size" "18px")}}
+                                <span>{{ .ReadingTime }} {{ "minute" | pluralize }}</span>
+                            </span>
 
-                                <time class="datePublished">
-                                    {{ partial "svg" (dict "iconName" "calendar" "size" "18px")}}
-                                    <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
-                                </time>
+                            <time class="datePublished">
+                                {{ partial "svg" (dict "iconName" "calendar" "size" "18px")}}
+                                <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+                            </time>
 
-                                {{ if .Draft }}
-                                <span class="draft-label">DRAFT</span>
-                                {{ end }}
-                            </div>
-                        </article>
-                    </div>
+                            {{ if .Draft }}
+                            <span class="draft-label">DRAFT</span>
+                            {{ end }}
+                        </div>
+                    </article>
                 </div>
-            </a>
-            {{ end }}
+            </div>
+        </a>
+        {{ end }}
         {{ end }}
     </div>
 </div>

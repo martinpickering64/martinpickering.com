@@ -12,10 +12,8 @@
                  style="background-image: url('{{ $featured_image | relLangURL}}')">
                 <div class="post-title">
                     <h1>{{ .Title }}</h1>
-                    {{ if .Params.description }}
-                    <div class="post-subtitle">
-                        {{ .Params.description }}
-                    </div>
+                    {{ with .Params.subtitle }}
+                    <p class="lead">{{ . }}</p>
                     {{ end }}
                     <div class="post-meta">
 
