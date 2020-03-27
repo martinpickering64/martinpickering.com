@@ -6,7 +6,7 @@ summary: The hegemony of the Request-Response style must be challenged. Asynchro
   in an ordered and appropriate way. Messaging Patterns help us to achieve that.
 date: 2017-07-03T10:18:53.000+00:00
 categories: ["Software"]
-tags: ["Design", "Messaging", "API"]
+tags: ["Design", "Messaging", "API", "Distributed Computing"]
 ---
 # Summary
 

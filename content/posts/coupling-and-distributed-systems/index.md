@@ -5,7 +5,7 @@ draft: false
 summary: "Collected notes from various sources "
 
 categories: ["Software"]
-tags: ["Design"]
+tags: ["Design", "Distributed Computing"]
 ---
 
 # Summary 

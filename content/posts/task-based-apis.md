@@ -8,7 +8,7 @@ summary: This Post is concerned with a possble future direction of Application P
   Objects, SOLID.
 date: 2018-03-06T15:08:15.000+00:00
 categories: ["Software"]
-tags: ["Design", "API"]
+tags: ["Design", "API", "Distributed Computing", "Messaging"]
 
 ---
 # Summary
@@ -254,7 +254,7 @@ Common shortcomings include:
 
 There is a well-known computer science topic entitled 'the fallacies of distributed computing'
 that can be researched on the Web and is abridged in my Post called
-[The Eight Fallacies](/posts/the-eight-fallacies).
+[The fallacies of distributed computing](/posts/fallacies-of-distributed-computing).
 
 Most APIs currently being developed and supported, and all APIs expressed using
 Web or RESTful Services, create a distributed solution. When designing these APIs,
