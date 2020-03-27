@@ -18,24 +18,29 @@
                     </div>
                     {{ end }}
                     <div class="post-meta">
-                        {{ if .Params.date}}
-                        <time itemprop="datePublished">
-                            {{ .PublishDate.Format "2006-01-02 15:04" }}
+
+                        <span class="reading-time">
+                            {{ partial "svg" (dict "iconName" "clock" "size" "18px")}}
+                            <span>{{ .ReadingTime }} {{ "minute" | pluralize }}</span>
+                        </span>
+
+                        <time class="datePublished">
+                            {{ partial "svg" (dict "iconName" "calendar" "size" "18px")}}
+                            <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
                         </time>
-                        {{ end }}
 
                         {{ if .Params.categories }}
-                            <i class="material-icons" style="">folder</i>
-                                <a href="{{ "/categories/" | relLangURL }}{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
-                                &nbsp;
+                        <i class="material-icons" style="">folder</i>
+                        <a href="{{ "/categories/" | relLangURL }}{{ .Params.categories | urlize }}">{{ .Params.categories }}</a>
+                        &nbsp;
                         {{ end }}
 
                         {{ if gt .Params.tags 0 }}
-                            <i class="material-icons" style="">label</i>
-                            {{ range .Params.tags }}
-                                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-                                &nbsp;
-                            {{ end }}
+                        <i class="material-icons" style="">label</i>
+                        {{ range .Params.tags }}
+                        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+                        &nbsp;
+                        {{ end }}
                         {{ end }}
                     </div>
                 </div>

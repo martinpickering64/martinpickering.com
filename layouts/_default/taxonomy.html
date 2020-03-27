@@ -19,7 +19,15 @@
                             <h1>{{.Title}}</h1>
                         </header>
                         <div class="post-item-meta">
-                            {{ dateFormat "Jan 2, 2006" .Date }}
+                            <span class="reading-time">
+                                {{ partial "svg" (dict "iconName" "clock" "size" "18px")}}
+                                <span>{{ .ReadingTime }} {{ "minute" | pluralize }}</span>
+                            </span>
+
+                            <time class="datePublished">
+                                {{ partial "svg" (dict "iconName" "calendar" "size" "18px")}}
+                                <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+                            </time>
 
                             {{ if .Draft }}
                             <span class="draft-label">DRAFT</span>

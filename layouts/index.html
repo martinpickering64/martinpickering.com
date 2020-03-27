@@ -18,7 +18,15 @@
                             {{.Description}}
                         </div>
                         <div class="post-item-meta">
-                            {{ .PublishDate.Format "2006-01-02" }}
+                            <span class="reading-time">
+                                {{ partial "svg" (dict "iconName" "clock" "size" "18px")}}
+                                <span>{{ .ReadingTime }} {{ "minute" | pluralize }}</span>
+                            </span>
+
+                            <time class="datePublished">
+                                {{ partial "svg" (dict "iconName" "calendar" "size" "18px")}}
+                                <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+                            </time>
                         </div>
                     </div>
                     {{ $featured_image := .Params.featured_image }}
