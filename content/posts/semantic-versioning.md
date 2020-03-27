@@ -3,14 +3,17 @@ title: "Semantic Versioning"
 date: 2018-02-22T10:49:19Z
 draft: false
 summary: "A widely adopted principle adopted within the Software Industry (amongst others) is known as Semantic Versioning.  Its manifesto can be found at https://semver.org/. I shall, unapologetically, reproduce an abridged version below as a reminder for myself."
+categories: ["Software"]
+tags: []
+
 ---
 
 A widely adopted principle adopted within the Software Industry (amongst others) is known as Semantic Versioning. 
 Its manifesto can be found at https://semver.org/. I shall, unapologetically, reproduce an abridged version below as a reminder for myself. 
 
-## Semantic Versioning 2.0.0 
+# Semantic Versioning 2.0.0 
 
-### Summary 
+## Summary 
 
 A version number has the following structure, MAJOR.MINOR.PATCH. You increment the:
  
@@ -20,7 +23,7 @@ A version number has the following structure, MAJOR.MINOR.PATCH. You increment t
 
 Additional labels for pre-release and build metadata can be added as extensions to the `MAJOR.MINOR.PATCH` format. 
 
-### Introduction 
+## Introduction 
 
 In the world of software management there exists a dread place called _dependency hell_. The bigger your system grows 
 and the more packages you integrate into your software, the more likely you are to find 
@@ -49,7 +52,7 @@ Under this scheme, version numbers and the way they change
 <u style="cursor:help" title="...and this is where the word semantic comes in">convey meaning</u> about 
 the underlying code and what has been modified from one version to the next.
  
-### Semantic Versioning Specification (SemVer) 
+## Semantic Versioning Specification (SemVer) 
 
 Software using Semantic Versioning MUST declare a public API. This API could be declared in 
 the code itself or exist strictly in documentation. However, it is declared, it should be 
@@ -126,7 +129,7 @@ For example:
 
 `1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0`
  
-### Why Use Semantic Versioning? 
+## Why Use Semantic Versioning? 
 
 SemVer is not a new or revolutionary idea. In fact, many versioning strategies are close to this already. 
 The problem is that _close_ isn't good enough. Without compliance to some sort of formal specification, 
@@ -147,7 +150,7 @@ is a messy place; there's nothing we can do about that, but be vigilant. Allow S
 provide a sane way to release and upgrade packages without having to roll new versions of dependent 
 packages, saving time and hassle. 
 
-### FAQ 
+## FAQ 
 
 Q: How should I deal with revisions in the `0.y.z` initial development phase? 
 

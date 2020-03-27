@@ -1,19 +1,21 @@
 baseURL = "https://www.martinpickering.com/"
 languageCode = "en-gb"
-title = "Martin Pickering - Personal Web"
-theme = "personal-web"
+title = "Martin Pickering"
+theme = "diary"
 copyright="Martin Pickering"
 googleAnalytics = "UA-149508279-2"
 enableEmoji=true
 enableRobotsTXT=true
-pygmentsUseClasses=true
+#pygmentsUseClasses=true
 pygmentsCodeFences=true
 
 [params.intro]
-  main = "Hi, I'm Martin :wave:"
+  main = "Hi, I'm Martin"
   sub = "I'm a Code Monkey, Beekeeper and Forester"
 
 [taxonomies]
+   tag = "tags"
+   category = "categories"
 #  design = "designs"
 #  tech = "techs"
 
@@ -79,11 +81,25 @@ pygmentsCodeFences=true
 #  weight = -110
 
 [[menu.main]]
-  identifier = "blog"
-  name = "Blog Posts"
-  title = "Blog section"
+  name = "Archive"
   url = "/posts/"
-  weight = -100
+  weight = 100
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 110
+
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 120
+
+[[menu.main]]
+  name = "About me"
+  url = "/about/"
+  weight = 130
+
 
 [sitemap]
   changefreq = "monthly"

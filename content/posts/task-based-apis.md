@@ -1,5 +1,5 @@
 ---
-title: Task-based Apis
+title: Task-based APIs
 subtitle: A treatise on the design of behaviourally complete APIs
 summary: This Post is concerned with a possble future direction of Application Programming
   Interface (API) Design. It asserts that we can achieve better APIs than have hitherto
@@ -7,9 +7,11 @@ summary: This Post is concerned with a possble future direction of Application P
   of key design disciplines and design patterns; DDD, CQRS, Event Sourcing, Naked
   Objects, SOLID.
 date: 2018-03-06T15:08:15.000+00:00
+categories: ["Software"]
+tags: ["Design", "API"]
 
 ---
-## Summary
+# Summary
 
 This Post is concerned with a possble future direction of Application Programming Interface (API) Design.
 It asserts that we can achieve better APIs than have hitherto been delivered. It proposes that there
@@ -24,7 +26,7 @@ The thrust and direction of the Post is that of APIs should be empathetic to the
 
 A concept given the name of _Behaviourally Complete APIs_, or _Task-based APIs_ for short.
 
-## Introduction
+# Introduction
 
 APIs for software Products have existed almost forever. Throughout that time there have been various
 styles espoused and technologies employed to create effective APIs. Many have come
@@ -44,7 +46,7 @@ The set of core values when applied to APIs results in a style or design of API 
 
 Finally, I give a simplified worked example that incorporates this philosophy to put _some meat on the bone_.
 
-## The sins of the past
+# The sins of the past
 
 Numerous issues with past APIs have as their root cause inappropriate levels of coupling inherent
 in their design, implementation and deployment. Coupling is a multi-dimensional software engineering
@@ -81,11 +83,11 @@ Services were lost, concepts became more addled because all standards were addit
 encouraged developers to cut corners and make unrealistic assumptions that, in turn,
 served only a short-term need of _just get something working_.
 
-The response to the debacle, known as SOAP and the legion of additive WS Standards, was to simplify again and a research topic known as the [Semantic Web](https://www.w3.org/standards/semanticweb/) and <u style="cursor:help" title="REST stands for Representational State Transfer, which is an architectural style for distributed hypermedia applications. Primarily used to build Web services that are lightweight, maintainable, and scalable. A service based on REST is known as a RESTful service">RESTful Services</u> were conceived.
+The response to the debacle, known as SOAP and the legion of additive WS Standards, was to simplify again and a research topic known as the [Semantic Web](https://www.w3.org/standards/semanticweb/) and <u style="cursor:help;text-decoration-style:dashed" title="REST stands for Representational State Transfer, which is an architectural style for distributed hypermedia applications. Primarily used to build Web services that are lightweight, maintainable, and scalable. A service based on REST is known as a RESTful service">RESTful Services</u> were conceived.
 
 Consequently, engineers urgently looking for a way out of their current Web Services hell adopted REST; without bothering to understand what REST was, nor taking any account as to why they got into trouble with SOAP Web Services and API Design in the first place. The outcome was solutions that did random stuff over HTTP and still delivered dysfunctional APIs. _Oh, deep joy!_
 
-### APIs lack intent
+## APIs lack intent
 
 Designing an API is not easy. In fact, it is hard to do.
 
@@ -117,7 +119,7 @@ exploratory messages to the installed Service. But all they get back is a failur
 Service being usually:
 
 * HTTP Status 500: Unexpected Server Error
-* Possibly HTTP Status 500 plus a stack dump from the <u style="cursor:help"
+* Possibly HTTP Status 500 plus a stack dump from the <u style="cursor:help;text-decoration-style:dashed"
   title="But only if the Service deployment has made elementary mistakes!
   Production environments should have been inhibited from leaking any such
   implementation detail to potential un-friendlies">Server's code</u>; the stack dump will usually indicate an Object Null Reference error
@@ -169,7 +171,7 @@ frustration boils over.
 The root cause was to fail to ensure that inherent in the design of our APIs the true
 intention or business goal for their existence was made clear and preserved.
 
-### The hell of SOAP and WS Standards
+## The hell of SOAP and WS Standards
 
 One of the stated goals of Web Services was to create platform independence between
 Service Clients and Service Hosts. Originally, the Web part of Web Services meant use
@@ -225,7 +227,7 @@ XML Technology. So, more complex software was created. There was increased diffi
 QA activities, yet more misunderstandings and argument occurred, cost and time overruns
 were experienced, and brittle unstable solutions were delivered.
 
-### Random stuff over HTTP
+## Random stuff over HTTP
 
 Random stuff over HTTP characterises the deployed result of what a development team
 calls RESTful Services. Most things are apparently random, there is a lack of
@@ -248,7 +250,7 @@ Common shortcomings include:
 * Authentication is weak
 * Failure to deliver meaningful documentation
 
-### The fallacies of distributed computing
+## The fallacies of distributed computing
 
 There is a well-known computer science topic entitled 'the fallacies of distributed computing'
 that can be researched on the Web and is abridged in my Post called
@@ -267,7 +269,7 @@ outcomes predicted by these fallacies result, for example:
 * Strident criticism of the APIs made by their Users
 * Integration Projects talking extended periods of time to deliver disappointing results
 
-### Coupling and distributed Systems
+## Coupling and distributed Systems
 
 The concepts of Coupling and Cohesion has existed since the birth of Software Engineering.
 They were intended to help Engineers get to achieve the benefits of Modular Programming by
@@ -282,7 +284,7 @@ needed to be; and especially so in our API designs.
 
 The Web can provide much information about Coupling and it is summarised in my Post [Coupling and Distributed Systems](/posts/coupling-and-distributed-systems).
 
-### Messaging patterns
+## Messaging patterns
 
 As our focus for interoperable APIs has centred on Web and RESTful Services, we have
 become myopic about the Messaging styles that we utilise; everything has decomposed
@@ -297,11 +299,11 @@ only use the Request-Response Pattern.
 The Web has much to say about Messaging Patterns and a set of relevant opinions
 are summarised in my Post [Messaging Patterns](/posts/messaging-patterns).
 
-## A new hope?
+# A new hope?
 
-### Our core values for API design
+## Our core values for API design
 
-I assert that many of the past issues related to <u style="cursor:help"
+I assert that many of the past issues related to <u style="cursor:help;text-decoration-style:dashed"
 title="Public APIs are those that we publish and document for us and others to use.
 Internal APIs that are private to the inner workings of our software. They
 could adopt the same set of core values, but other ones may also be appropriate
@@ -321,7 +323,7 @@ API design will stand us in good stead. These values are:
 * OpenID Connect and OAUTH2 are the preferred identification and authentication technologies (and hence RESTful services being preferred)
 * HTTP Verbs must be used appropriately and show true intent, e.g. GET Requests must not cause state to change
 * HTTP Status Codes must be used appropriately, e.g. 200 and 500 are not the only response codes
-* <u style="cursor:help" title="Idempotence is the property of an operation that it can be applied multiple times
+* <u style="cursor:help;text-decoration-style:dashed" title="Idempotence is the property of an operation that it can be applied multiple times
   without changing the result beyond the initial application">Idempotent Service Methods</u> are always the goal;
   they lead to simpler and more robust solutions
 * Request-Response is not the only message pattern; try to ensure the most appropriate message pattern is used
@@ -330,14 +332,14 @@ The most important, first amongst equals, of our core values for APIs is...
 
 > Our APIs must allow the true intent of their use to be fully and clearly expressed
 
-### APIs must express intent
+## APIs must express intent
 
 The principle that APIs communicate true intent as well as communicate data
 is simply put, but profoundly felt.
 
 One implication is that expressing a set of Web Services as a facsimile of
 the Database's principle Entities is almost never going to be appropriate. Further,
-declaring <u style="cursor:help" title="CRUD: create, read, update, and delete are the four
+declaring <u style="cursor:help;text-decoration-style:dashed" title="CRUD: create, read, update, and delete are the four
 basic functions of persistent storage">CRUD</u> style Service Methods for each of our Services is inappropriate, because
 business processes that our APIs are aimed at supporting don't do CRUDy, things
 they set out to accomplish specific tasks and so should our APIs.
@@ -354,7 +356,7 @@ Entity Service as it does not naturally belong to one or other instance of an
 Account involved in a transfer of funds">Entity Services</u> revealed by the DDD Model.
 
 An API operates within the borders of a single [Bounded Context](https://martinfowler.com/bliki/BoundedContext.html)
-and as such it would be <u style="cursor:help"
+and as such it would be <u style="cursor:help;text-decoration-style:dashed"
 title="Authoritative - the origin of the truth and the only place
 where state changes are allowed to take place">authoritative</u> concerning the Entity Roots
 that reside within the BC.
@@ -362,7 +364,7 @@ that reside within the BC.
 Most authorisation needs are satisfied by gaining entry to the BC, so simplifying
 any implementation and administration of Authorisation needs.
 
-#### But what is meant by intent?
+### But what is meant by intent?
 
 Rather than directly answer this question, consider a different question...
 
@@ -403,7 +405,31 @@ Now look at the impact of adding intent back into the Sales Order Service API. T
 
 If you were in any doubt, the answer to all the above is **YES**. Note that those are just a few of the obvious benefits, there are more besides.
 
-### An example
+## Separating commands and queries
+
+Most APIs naturally segment into Service Methods that retrieve data or state,
+i.e. queries, and Service Methods that mutate state, i.e. commands.
+
+There is a Design Pattern that recognises nature of commands and queries and
+points towards solutions that are beneficial for quality implementations. It
+is known as Command Query Separation (_CQS_). This early pattern was later revised
+and improved for the context of APIs and given the moniker of Command Query
+Request Separation or CQRS. There is a derivation of CQRS known as CQRS plus
+Event Sourcing, which extends the abstraction even further and incorporates
+specialised persistence technologies with intrinsic Backup, Logging and
+Auditing features as well as the ability to re-purpose history (_Commands
+previously received and processed_) for the benefit of new features that
+have the characteristic of seemingly having always been present in
+the deployed solution.
+
+I am not proposing that we should all incorporate CQRS or CQRS + Event Sourcing.
+I am asserting that knowledge and experience of these
+design patterns will positively assist our design efforts for our
+Behaviourally Complete APIs. The principles these patterns are based
+upon, the reasons why and the issues they attempt to address offer much
+insight for us in our efforts.
+
+## An example
 
 Lets examine a very trivial example to get ourselves going and in the mood.
 
@@ -427,9 +453,8 @@ authenticated users for all operations.
 The retrieval side of the functionality is relatively straight forwards and
 should lead to little discussion:
 
-* To obtain a list of installed Lights, request URL `~/api/lights` using HTTP `GET`. This would be a Request-Response style message returning a HTTP `200` and a JSON array of Light objects (Id, Description and perhaps current state: on or off)
-* To obtain information about an individual Light, request URL `~/api/lights/{light-id}` using HTTP `GET`. This Request-Response would return either HTTP `404` (not found) or HTTP `200` along with a JSON Object representing a Light object (Id, Description and current state)
-* 
+* To obtain a list of installed Lights, request URL `~/api/lights` using `HTTP GET`. This would be a Request-Response style message returning a `HTTP 200` and a JSON array of Light objects (Id, Description and perhaps current state: on or off)
+* To obtain information about an individual Light, request URL `~/api/lights/{light-id}` using HTTP `GET`. This Request-Response would return either `HTTP 404 (not found)` or `HTTP 200 (OK)` along with a JSON Object representing a Light object (Id, Description and current state)
 
 It is most often the case that retrieval parts of an API will use the Request-Response Message Pattern.
 
@@ -461,7 +486,7 @@ state to be achieved (on or off). I believe the first design displays better coh
 by more honestly observing the single responsibility principle of software design and
 exhibits less data coupling.
 
-As both operations mutate the state of an existing Light then <u style="cursor:help"
+As both operations mutate the state of an existing Light then <u style="cursor:help;text-decoration-style:dashed"
 title="One could argue for the use of HTTP PATCH instead of HTTP PUT, but
 most developers' minds start to explode at that point, just like in
 the film Mars Attacks">HTTP `PUT`</u> is the
@@ -469,7 +494,7 @@ appropriate Verb choice. Accordingly, the successful return code is `204`, the
 change of state has occurred and signifies the use of the Request-Response message
 pattern. Alternatively, a success response could be `201 ACCEPTED`, meaning the request
 to change state has been accepted and will be applied; a message pattern other than
-<u style="cursor:help"
+<u style="cursor:help;text-decoration-style:dashed"
 title="Imagine that the state of our Lights is only ever allowed to change every 5 minutes,
 meaning that a Request-Response pattern would demand that our caller waits
 for up to 5 minutes before getting their reply. Using one or other of the
@@ -479,37 +504,13 @@ execution time to arrive">Request-Response is in play</u>.
 
 So, our API Design is now:
 
-* To switch on a Light with Id 1234, use HTTP PUT to request the URL `~/api/lights/1234/switchOn`, the request body would be empty. This Request-Response would return either HTTP `404 (not found)` or HTTP `204`
-* To switch off a Light with Id 1234, use HTTP PUT to request the URL `~/api/lights/1234/switchOff`, the request body would be empty. This Request-Response would return either HTTP `404 (not found)` or HTTP `204`
+* To switch on a Light with Id 1234, use `HTTP PUT` to request the URL `~/api/lights/1234/switchOn`, the request body would be empty. This Request-Response would return either `HTTP 404 (not found)` or`HTTP 204`
+* To switch off a Light with Id 1234, use `HTTP PUT` to request the URL `~/api/lights/1234/switchOff`, the request body would be empty. This Request-Response would return either `HTTP 404 (not found)` or `HTTP 204`
 
 The design assumes (_or is constrained such that_) an identified Light cannot
 fail. The design would need to change some more if there was any doubt about that.
 
-### Separating commands and queries
-
-Most APIs naturally segment into Service Methods that retrieve data or state,
-i.e. queries, and Service Methods that mutate state, i.e. commands.
-
-There is a Design Pattern that recognises nature of commands and queries and
-points towards solutions that are beneficial for quality implementations. It
-is known as Command Query Separation (_CQS_). This early pattern was later revised
-and improved for the context of APIs and given the moniker of Command Query
-Request Separation or CQRS. There is a derivation of CQRS known as CQRS plus
-Event Sourcing, which extends the abstraction even further and incorporates
-specialised persistence technologies with intrinsic Backup, Logging and
-Auditing features as well as the ability to re-purpose history (_Commands
-previously received and processed_) for the benefit of new features that
-have the characteristic of seemingly having always been present in
-the deployed solution.
-
-I am not proposing that we should all incorporate CQRS or CQRS + Event Sourcing.
-I am asserting that knowledge and experience of these
-design patterns will positively assist our design efforts for our
-Behaviourally Complete APIs. The principles these patterns are based
-upon, the reasons why and the issues they attempt to address offer much
-insight for us in our efforts.
-
-## Call to action
+# Call to action
 
 When we consider modifying one or other of our existing APIs, we should
 pause a moment and refrain from our historical practices. We should use

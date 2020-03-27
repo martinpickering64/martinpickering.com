@@ -3,9 +3,12 @@ title: "Coupling and Distributed Systems"
 date: 2017-06-26T10:49:19Z
 draft: false
 summary: "Collected notes from various sources "
+
+categories: ["Software"]
+tags: ["Design"]
 ---
 
-## Summary 
+# Summary 
 
 __Assertion__: Excessive re-use of anything leads to tight coupling. 
 
@@ -30,7 +33,7 @@ candidate solutions for us to use to manage our coupling levels. We have decided
 that what's most important is to recognise and to create the right amount of 
 coupling to suit what we are attempting to achieve. 
 
-## Introduction 
+# Introduction 
 
 Software Engineering principles from way back, when Software Engineering was born as a discipline3 introduced the concepts of Coupling and Cohesion. They were designed to help Programmers get to grips with the concepts of Modular Software Structure and what was good and what was bad. Those measures are not often heard about now, but they still hold true when considering software design. 
 
@@ -49,7 +52,7 @@ The remainder of this document has been structured along the following lines:
 3. Next, there are several more types of coupling when one looks at the nature of distributed systems and so I define these other forms as well and illustrate solutions for poor coupling of the various types 
 4. Finally, I try to summarise the journey taken and bring it all together 
 
-## So what is coupling anyways? 
+# So what is coupling anyways? 
 
 Logical Coupling in Object Orientated Software Design is a measure of the dependencies that exist in the way the software has been structured. If Object X is dependent upon Object Y then we can say that logical coupling exists between X and Y. 
 
@@ -64,13 +67,13 @@ In actual fact, it is useful to look upon logical coupling as being of two disti
 1. Afferent Coupling (Ca): the count of incoming dependencies 
 2. Efferent Coupling (Ce): the count of outgoing dependencies 
 
-### But what is loose coupling? 
+## But what is loose coupling? 
 
 Loosely coupled entities exhibit the right amount of coupling for their needs and no more. 
 
 After performing static analysis of a System containing four Classes the following measures of Ca and Ce coupling were obtained: 
 
-{{< figure src="/posts/images/table-ca-ce-coupling.png" >}}
+{{< figure src="table-ca-ce-coupling.png" >}}
 
 From these results we are able to determine that: 
 
@@ -93,11 +96,11 @@ What about Class D. Well it is irrelevant. Delete it.
 
 Whilst we have said that a high Afferent Coupling measure can be ok in the right context, it is typically the case that high Efferent Coupling is a bad thing. 
 
-### Measuring Logical Coupling 
+## Measuring Logical Coupling 
 
 Consider the following software design: 
 
-{{< figure src="/posts/images/example-software-design.png" >}}
+{{< figure src="example-software-design.png" >}}
 
 Class X is dependent on Class Y by virtue of Class X accessing or using a single Method or Property belonging to Class Y. Class A is dependent upon Class B because it uses five different Methods or Properties belonging to Class B. 
 
@@ -115,21 +118,21 @@ Efferent Coupling is measured by how many things may break me.
 
 Static Code Analysers (like NDepend) can produce Ca and Ce measures for us and some static analysers possess a Constraint Query Language that allow you to build tests associated with their analysis results and place those tests as part of the Continuous Integration Build Pipeline. This offers the opportunity to fail a build if inappropriate static analysis results are discovered (e.g. a suspect logical coupling measure). 
 
-## How much coupling is enough? 
+# How much coupling is enough? 
 
 We have already seen that the amount of logical coupling displayed by a system is determined by how you choose to count it. We also have seen that the difference between a good level and a bad level of coupling is dependent upon the context of what has been measured. So it doesn't look like this question can actually be answered other than by _it depends_ and our judgement is affected by the context, our experiences and our prejudices. 
 
 A useful guide exists in the form of the following chart, which is plotting Ca and Ce. It is attempting to show the relative Ca-Ce ratios one might expect to see for Classes assigned different types of responsibilities: 
 
-{{< figure src="/posts/images/coupling-graph.png" >}}
+{{< figure src="coupling-graph.png" >}}
 
 Whilst considering the extent of logical coupling displayed by a System's components, beware of coupling that can grow unseen, usually via shared resources, as they will hide the coupling in your design that would have otherwise been apparent. An example of such a shared resource is a database. 
 
-{{< figure src="/posts/images/shared-resource.png" >}}
+{{< figure src="shared-resource.png" >}}
 
 Loose coupling minimizes the Afferent and Efferent Coupling but always pays attention to the context in which it exists. Zero coupling is impractical. Above all, we should not be mechanistic about how the amount of coupling is adjusted or how we judge what is a good or a bad amount of coupling. 
 
-## Platform Coupling 
+# Platform Coupling 
 
 When considering distributed systems, there are more types of Coupling than just Logical Coupling. Platform Coupling also exists. 
 
@@ -138,7 +141,7 @@ When considering distributed systems, there are more types of Coupling than just
 
 One of the SOA Principles is that of _share Contract and Schema and not Class or Type_. This is an attempt to limit the extent of Platform Coupling 
 
-### Potential Solutions for Platform Coupling 
+## Potential Solutions for Platform Coupling 
 
 __Assertion__: The first rule of distributed computing is __DON'T__. 
 
@@ -155,23 +158,23 @@ Other standards that may exist include SOAP, WSDL and REST. Be cautious about RE
 
 Java and .Net bridges, like JNBridge, allow Java code to exist in-process on the .Net CLR. They also allow the reverse to occur, i.e. for .Net code to be in-process on the JVM. Interoperability achieved without needing to resort to a network-call. 
 
-## Temporal Coupling 
+# Temporal Coupling 
 
 The processing time of an operation on Service A is dependent upon the processing time of an operation of Service B. 
 
-{{< figure src="/posts/images/temporal-aspect.png" caption="figure 1 Temporal Coupling Aspect" >}}
+{{< figure src="temporal-aspect.png" caption="figure 1 Temporal Coupling Aspect" >}}
 
-### Potential solutions for Temporal Coupling 
+## Potential solutions for Temporal Coupling 
 
 __Assertion__: Distributed system always require decisions to be made based upon stale data. If the business requirements advocate for a position whereby decisions can never be made based upon stale data then the solution design cannot involve distribution. 
 
 Figure 1 shows us high temporal coupling between Service A and Service B. If we decompose those interactions a little more we also see that their interaction also involves acting upon stale data. Unfortunately, the presence of stale data is somewhat hidden within the design and so is often overlooked. 
 
-{{< figure src="/posts/images/temporal-aspect-detail.png" caption="figure 2 a more detail view of Temporal Aspect Coupling" >}}
+{{< figure src="temporal-aspect-detail.png" caption="figure 2 a more detail view of Temporal Aspect Coupling" >}}
 
 It is possible to refactor the design of Service A and Service B to reduce the amount of temporal coupling between them and to make plain the presence of stale data. By making the use of stale data visible it is more possible to validate the decision to do so. The Publish/Subscribe Pattern has been used to help refactor the design. 
 
-{{< figure src="/posts/images/reduced-temporal-coupling.png" caption="figure 3 with reduced Temporal Coupling" >}}
+{{< figure src="reduced-temporal-coupling.png" caption="figure 3 with reduced Temporal Coupling" >}}
 
 There are many designs that can be refactored using the Publish/Subscribe Pattern (Pub/Sub for short). However, there are some deployment options that make Pub/Sub difficult to utilise. Consider the System shown in Figure 4, Service A and Service B represent or are allocated a number of different responsibilities. In addition, Service B is a Service not under our control (it is from a third-party). Now consider that we are re-factoring our System to reduce its temporal coupling and introducing Pub/Sub. When we come to re-look at the responsibility and requirements of our System, they indicate that the service boundaries should be as depicted by Service X and Service Y. 
 
@@ -185,7 +188,7 @@ As we can't change Service B, or re-factor System Design around Service X and Se
   - Throughput performance is likely to be lower than otherwise 
   - An increase in resource contention is likely 
 
-{{< figure src="/posts/images/reduced-temporal-coupling.png" caption="figure 4 a conflict over responsibilities" >}}
+{{< figure src="conflict-over-responsibilities.png" caption="figure 4 a conflict over responsibilities" >}}
 
 The hallmarks to look out for that will suggest the introduction of Pub/Sub to reduce temporal coupling and will cause the least number of complications whilst doing so are: 
 
@@ -195,13 +198,13 @@ There must exist a strong division of responsibility between a potential Publish
 
 Only one Subscriber should have the responsibility of publishing a given kind of event 
 
-## Spatial Coupling 
+# Spatial Coupling 
 
-{{< figure src="/posts/images/spatial-coupling-aspect.png" caption="figure 5 Spatial Coupling Aspect" >}}
+{{< figure src="spatial-coupling-aspect.png" caption="figure 5 Spatial Coupling Aspect" >}}
 
 If Server 2 were to fail, could Service A [on Server 1] automatically continue by using Service B on Server 3? 
 
-### Potential solutions for Spatial Coupling 
+## Potential solutions for Spatial Coupling 
 
 Any given code ought not to need to know where its co-operating Services are on the network. This can be achieved by delegating communications to a lower software level; an example of which is the [Service Agent Pattern](http://soapatterns.org/design_patterns/service_agent).  
 
@@ -213,13 +216,13 @@ Using the Service Agent, client code could instruct the Agent to route according
 
 Document-centric routing is an alternative to command routing. The message contents contains information that instructs the Service Agent as to how the message needs to be routed. 
 
-## Coupling: a summary 
+# Coupling: a summary 
 
 The concept of Loose-Coupling is more than just a slogan, but it is difficult to define and to quantify absolutely. 
 
 By looking at the various types of coupling and their inter-relationships we have discovered that coupling is a multi-dimensional problem. 
 
-{{< figure src="/posts/images/coupling-is-multi-dimensional.png" caption="figure 6 coupling is multi-dimensional" >}}
+{{< figure src="coupling-is-multi-dimensional.png" caption="figure 6 coupling is multi-dimensional" >}}
 
 The Publish/Subscribe Pattern impacts most types of coupling by lowering the extent of coupling except for spatial coupling, which is almost always increased. Messaging technologies, such as AMQP, might prove useful to lessen the degree of spatial coupling introduced by Pub/Sub. 
 

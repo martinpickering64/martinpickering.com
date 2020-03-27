@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <article class="post">
+            {{ $post_class := "post-head-wrapper-text-only"}}
+            {{ $featured_image := .Params.featured_image }}
+            {{ if $featured_image }}
+                {{ $post_class = "post-head-wrapper"}}
+            {{ end }}
+
+            <header class="{{$post_class}}"
+                 style="background-image: url('{{ $featured_image | relLangURL}}')">
+                <div class="post-title">
+                    <h1>{{ .Title }}</h1>
+                    {{ if .Params.description }}
+                    <div class="post-subtitle">
+                        {{ .Params.description }}
+                    </div>
+                    {{ end }}
+                </div>
+            </header>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    {{.Content}}
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}

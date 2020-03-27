@@ -5,15 +5,16 @@ summary: The hegemony of the Request-Response style must be challenged. Asynchro
   Messaging is our _David_. But to defeat _Goliath_ we must know how to apply messaging
   in an ordered and appropriate way. Messaging Patterns help us to achieve that.
 date: 2017-07-03T10:18:53.000+00:00
-
+categories: ["Software"]
+tags: ["Design", "Messaging", "API"]
 ---
-## Summary
+# Summary
 
 **Assertion**: Messaging is an important underpinning as to how we will deliver SaaS.
 
 The hegemony of the Request-Response style must be challenged. Asynchronous Messaging is our _David_. But to defeat _Goliath_, we must know how to apply messaging in an ordered and appropriate way. Messaging Patterns help us to achieve that.
 
-## Introduction
+# Introduction
 
 This document is about some of the principles and patterns associated with using Messaging as a building block in distributed computing systems.
 
@@ -30,7 +31,7 @@ We will make mistakes in drawing up our Boundary Contexts and need to make revis
 
 The rest of this document is structured such that a few notable design patterns and architectural styles associated with the use of Messaging are illustrated, along with discussion as to how to be resilient towards various common forms of failure.
 
-## Asynchronous messaging
+# Asynchronous messaging
 
 Asynchronous messaging is the _daddy concept_. Messaging is one-way, it is fire-and-forget, send and move on. Everything else is built on this idea. The main patterns being:
 
@@ -38,32 +39,32 @@ Asynchronous messaging is the _daddy concept_. Messaging is one-way, it is fire-
 2. Request-Response Pattern, and derivatives such as the Correlated Request-Response
 3. Publish/Subscribe
 
-## Messaging substrate types
+# Messaging substrate types
 
 The messaging substrate is typically one of two types:
 
 1. The federated message bus
 2. The message broker
 
-### The Federated Message Bus
+## The Federated Message Bus
 
-{{< figure src="/posts/images/federated-message-bus.png" caption="figure 1 the federated message bus" >}}
+{{< figure src="federated-message-bus.png" caption="figure 1 the federated message bus" >}}
 
 The Federated Bus uses a _store and forward_ technique that reduces temporal coupling between the Client and the Message Substrate and also increases the overall resilience of the substrate. An example of this type of messaging substrate is Microsoft's MSMQ.
 
-### The Message Broker
+## The Message Broker
 
 In a Broker style system, the messaging client exhibits temporal coupling to the Message Broker.
 
-{{< figure src="/posts/images/message-broker.png" caption="figure 2 the message broker" >}}
+{{< figure src="message-broker.png" caption="figure 2 the message broker" >}}
 
 Examples of Broker style messaging substrates tend to be those based upon the AQMP standard, like RabbitMQ.
 
-## One-way, fire and forget messaging
+# One-way, fire and forget messaging
 
 A Message is sent by a client. If the message is accepted by the messaging substrate then that is the end of it from point of view of the client. The client cannot know, nor must it care whether the message has been delivered or when it will be delivered. The execution of client process is not blocked subsequent to the message being accepted.
 
-{{< figure src="/posts/images/one-way-fire-and-forget-messaging.png" caption="figure 3 one-way, fire-and-forget messaging" >}}
+{{< figure src="one-way-fire-and-forget-messaging.png" caption="figure 3 one-way, fire-and-forget messaging" >}}
 
 In the One-way Messaging model, every message has a unique identifier. The Message Identifier (msgId) is critical:
 
@@ -83,13 +84,13 @@ As messaging is asynchronous from top to bottom:
 
 It should not be forgotten that all of these advantages come at the price of a performance penalty at low levels of load/demand.
 
-## Realising Message-based Processing
+# Realising Message-based Processing
 
 This section briefly compares Web Service processing with message processing to make you think. It also shows how very simple software constructs used alongside of the messaging substrate deliver some powerful infrastructure.
 
 We are entirely familiar with defining a WCF Service in our Service Layer Presentation consisting of Service, Operation, Data and Fault Contracts, for example a Customer Service:
 
-{{< figure src="/posts/images/customer-service-and-operations.png" caption="figure 4 Service Layer - Customer Service and Operations contract" >}}
+{{< figure src="customer-service-and-operations.png" caption="figure 4 Service Layer - Customer Service and Operations contract" >}}
 
 We are also familiar with several problems that commonly materialize as our Services tend to grow and become large
 
@@ -98,11 +99,11 @@ We are also familiar with several problems that commonly materialize as our Serv
 
 By introducing asynchronous messaging we have an opportunity to exploit strongly-typed messages:
 
-{{< figure src="/posts/images/processing-strongly-typed-messages.png" caption="figure 5 a model for processing strongly-typed messages" >}}
+{{< figure src="processing-strongly-typed-messages.png" caption="figure 5 a model for processing strongly-typed messages" >}}
 
 In the above model, the Interface `IMessage` could be regarded as the WCF Data Contract equivalent and the Interface `IHandleMessages<T>` as an equivalent of the Service and Operations Contracts. So, we end up representing our Service Methods (as was) as messages of specific types:
 
-{{< figure src="/posts/images/processing-strongly-typed-messages.png" caption="figure 6 the message handler equivalent of the Customer Service" >}}
+{{< figure src="customer-service-message-handler.png" caption="figure 6 the message handler equivalent of the Customer Service" >}}
 
 The implementation of the Interface IMessage is the equivalent of a <u style="cursor:help;text-decoration-style:dashed" title="Plain Old C# Object Data Transfer Object">POCO DTO</u> Class.
 
@@ -110,11 +111,11 @@ By taking this approach (`IMessage and IHandleMessages<T>`) we are directed towa
 
 Clearly the implication of the above is that a strongly-typed message can be processed by strongly-typed message handler. But as our Solutions exist in an Object Universe, we can also arrange for a Message Handler to support multiple messages by exploiting inheritance. If we were to imagine our server-side message dispatcher framework was able to implement a kind of polymorphic behaviour then we could achieve a scenario of multiple message handlers that were capable of handling a given message type. This is the basis of being able to utilise a Pipeline Pattern whilst processing or consuming the messages received. The Pipeline Pattern allows for a dividing up of the processing of a message along the boundaries of our cross-cutting concerns or according to discrete parts of the Business Logic. It would also allow for the versioning of messages and the associated routing needs for those message versions.
 
-{{< figure src="/posts/images/message-handler-pipeline.png" caption="figure 7 a set of message handlers that could be used in a Pipeline" >}}
+{{< figure src="message-handler-pipeline.png" caption="figure 7 a set of message handlers that could be used in a Pipeline" >}}
 
 We could apply a convention in our IMessage definition such that there was a Body property for the Message Payload, and a Header container property for a collection of Message Meta-Data properties and other non-message payload stuff that would help us achieve other non-functional requirements, such as message de-duplication.
 
-## Messaging and software reliability
+# Messaging and software reliability
 
 Software is unreliable and is also subject to the unreliability inherent in its execution environment. Appropriate application of Messaging can assist us achieving a more robust outcome in the face of failures such as:
 
@@ -125,11 +126,11 @@ Software is unreliable and is also subject to the unreliability inherent in its 
 
 First of all, let's take a look at these types of failures for a conventional n-tier system involving a Client making requests of an application server over HTTP that in turn makes requests of a database server.
 
-{{< figure src="/posts/images/wheres-the-data-gone.png" caption="figure 8 when Servers crash... where's the Request data gone?" >}}
+{{< figure src="wheres-the-data-gone.png" caption="figure 8 when Servers crash... where's the Request data gone?" >}}
 
 If the App on the WWW Server were to crash and recycle (which would cause the database to rollback), where has the Request Data gone to? Has it been lost?
 
-{{< figure src="/posts/images/wheres-the-database-gone.png" caption="figure 8 when a database crashes... where's the Request data gone?" >}}
+{{< figure src="wheres-the-database-gone.png" caption="figure 8 when a database crashes... where's the Request data gone?" >}}
 
 The App on the WWW Server experiences an exception after making a request of the database on the DB Server. Can the App know if the database is up or down? Can the App recover? If it can't, where's the Request Data gone?
 
@@ -139,11 +140,11 @@ But what is worse is that in rolling back our crash has not only lost the instan
 
 If the exception were as a result of deadlock detection by the DB Server, then again where has the Request Data gone?
 
-### How can messaging help?
+## How can messaging help?
 
 How can asynchronous messaging and the messaging substrate assist given these inevitable but invidious failures?
 
-{{< figure src="/posts/images/when-a-crash-happens.png" caption="figure 10 when a crash happens... messaging can help us recover without Request data loss" >}}
+{{< figure src="when-a-crash-happens.png" caption="figure 10 when a crash happens... messaging can help us recover without Request data loss" >}}
 
 Having introduced messaging, our client deposits its Request Data to a durable queue directly, or <u style="cursor:help;text-decoration-style:dashed" title="But the preference is directly">via a HTTP Facade</u>, our App receives the message from the durable queue as part of a new distributed transaction. Our App goes onto to use the <u style="cursor:help;text-decoration-style:dashed" title="Distributed Transaction Corordinator">DTC</u> to enlist the Database Server into the same transaction and then sends Requests to the Database Server. Assuming all is well, then the transaction is committed via the DTC and both the database and the durable queue commit. Should an exception occur after the database has been enlisted into the transaction then it will rollback. The durable queue will always rollback.
 
@@ -162,7 +163,7 @@ As we now control the behaviour in respect of Request Data when failures occur, 
 
 **Assertion**: the adoption of this type of failure resolution does demand that the message handlers and the business process steps they represent do not rely on the ordering of any message's arrival to the message handler.
 
-## Messaging and Third-Party Web Services
+# Messaging and Third-Party Web Services
 
 In the previous section we looked at failures associated with Web Service architectures and how the introduction of Messaging could increase the resilience of the software without resorting to excessive complications in our application code.
 
@@ -172,7 +173,7 @@ So, does the need to communicate with Web Services seriously impact our ability 
 
 First let's decompose the problem a little.
 
-{{< figure src="/posts/images/processing-pipeline.png" caption="figure 11 a processing pipeline involving a third-party web service call" >}}
+{{< figure src="processing-pipeline.png" caption="figure 11 a processing pipeline involving a third-party web service call" >}}
 
 In Figure 11, processes A, B, C and D represent steps in a Pipeline. Process Step C involves invoking the services of a Web Service, for example a Payment Processing Service. Process Step D involves persisting information to a database including the details about the Payment Authorisation that took place during Step C.
 
@@ -191,7 +192,7 @@ outcome as if we had sent the Payment Request once; a single authorised payment 
 OK, but what if we can't/don't create exact duplicates of requests when we retry so that the immutable
 Payment Service does not receive duplicate requests from our Pipeline? Let's change the design of the Pipeline a little:
 
-{{< figure src="/posts/images/modified-processing-pipeline.png" caption="figure 12 modified processing pipeline involving a third-party web service call" >}}
+{{< figure src="modified-processing-pipeline.png" caption="figure 12 modified processing pipeline involving a third-party web service call" >}}
 
 Step C no longer interacts directly with the Payment Processing Web Service. Instead it uses a message to indicate
 that a request for a Payment Authorisation is needed. This `Auth Payment Msg` is the subject of a transacted message
@@ -218,29 +219,29 @@ this issue and making our interactions with the Payment Processor robust and rel
 * Use the query services provided by the Payment Processor prior to sending a payment authorisation request to discover whether such a request has been made before and accepted (in other words we had lost a prior response). But be aware if the query service utilises caching then an absence of data does not reliably indicate no request has been previously made and accepted due to stale data. There are techniques that can be used that may defeat or work around their cache, but they can look like and indeed behave similar to a Denial of Service attack. Presumably that would not be welcome
 * Give up and accept that this part of the System is going to forever be the cause of dissatisfaction
 
-## The Request/Response Pattern
+# The Request/Response Pattern
 
 The Request-Response Pattern builds upon our core (and preferred) asynchronous messaging pattern by adding to the Request Messages meta-data an indication of where any responses are to be sent (known as the Return Address Pattern).
 
-{{< figure src="/posts/images/return-address-pattern.png" caption="figure 13 Request/Response using the Return Address Pattern" >}}
+{{< figure src="return-address-pattern.png" caption="figure 13 Request/Response using the Return Address Pattern" >}}
 
 Therefore, the Request/Response Pattern requires 2 communication channels: 1 for Requests and 1 for Responses.
 
 Unlike Request/Response models we are more used to (e.g. HTTP), there is not an absolute need for the recipient of the Response to be the same as the initiator of the Request. We can make use of this new degree of freedom in our System Designs to assist with partitioning our processing and distribution of load, to make constructs like a Pipeline or to handle error scenarios such as poisonous messages.
 
-{{< figure src="/posts/images/partitioning-the-return-address-pattern.png" caption="figure 14 partitioning/distribution using the Return Address Pattern" >}}
+{{< figure src="partitioning-the-return-address-pattern.png" caption="figure 14 partitioning/distribution using the Return Address Pattern" >}}
 
 In Figure 14, we have used the Return Address Pattern to implement a Request/Response model, but we have also taken advantage of this separation to distribute the processing of the Request and the Response between Server 1 and Server 3. A similar technique could be used to create a Pipeline or to manage poisonous letters.
 
-{{< figure src="/posts/images/return-address-pattern-error-mgmt.png" caption="figure 15 error management using the Return Address Pattern" >}}
+{{< figure src="return-address-pattern-error-mgmt.png" caption="figure 15 error management using the Return Address Pattern" >}}
 
-## The Correlated Request/Response Pattern
+# The Correlated Request/Response Pattern
 
 The Correlated Request/Response Pattern is used when the recipient of the Response must be able to match the Response received with the original Request that generated it.
 
 This Pattern builds upon the Request/Response Pattern by adding more Meta-data to the Response Message. This additional meta-data property is known as the Correlation Identity and its value is that of the Request Message's Message Identity.
 
-{{< figure src="/posts/images/correlated-request-response.png" caption="figure 16 Correlated Request/Response" >}}
+{{< figure src="correlated-request-response.png" caption="figure 16 Correlated Request/Response" >}}
 
 Generally, it is implied that the Recipient of the Response is the same as the Initiator of the Request, as the Recipient has to have access to and a need to use state derived from the Request, such as the Request Message Identity.
 
@@ -254,23 +255,23 @@ Often times, making efficient use of these threads and not holding on to them ca
 significant difference into the scale and throughput achieved by any given deployment.">IIS/ASP.Net Application Pool Worker Thread</u> can be returned back
 to IIS/ASP.Net early and be re-used to service additional HTTP Requests.
 
-## The Request/Multi-Response Pattern
+# The Request/Multi-Response Pattern
 
 The Request/Multi-Response Pattern builds on top of the Request/Response Pattern. It allows for the Recipient of the Request to respond with several messages, which could also be different message types.
 
-{{< figure src="/posts/images/request-multi-response.png" caption="figure 17 Request/Multi-Reponse" >}}
+{{< figure src="request-multi-response.png" caption="figure 17 Request/Multi-Reponse" >}}
 
 There can be several scenarios where the Request/Multi-Response Pattern could prove useful. An interesting one is in regard of the Pipeline Pattern. Here an individual Request initiates a number of Pipeline Steps, any and all of those Steps could be allowed to generate a Response (or Responses).
 
 Decomposing a problem-solution using an asynchronous messaging pipeline approach can remove the need to create Server Facades or Service Layer Business Logic Orchestration as those needs become subsumed into the Message Pipeline. By using subscription to recruit message handlers into a pipeline for a given message type we have a new way of thinking about our solution design and decomposition that has lower coupling and built-in extensibility. Most of the coupling that does remain is the type of coupling we already know has to be present; semantic interoperability and boundary contexts.
 
-{{< figure src="/posts/images/message-pipeline-decoupling.png" caption="figure 18 Message Pipeline decouling" >}}
+{{< figure src="message-pipeline-decoupling.png" caption="figure 18 Message Pipeline decouling" >}}
 
-## The Publish/Subscribe Pattern
+# The Publish/Subscribe Pattern
 
 This is a well-known pattern used in both Messaging and Event-driven systems. In all cases its name is a bit of a misnomer as it implies a reversal of the actual sequence between the roles of Publisher and Subscriber. Renaming the Pattern as Subscribe/Publish would be more accurate as it reflects the actual sequence; subscription must take place prior to publication for the parties to communicate. But Publish/Subscribe it is, or Pub/Sub for short.
 
-{{< figure src="/posts/images/publish-subscribe-pattern.png" caption="figure 19 the Publish/Subscribe Pattern" >}}
+{{< figure src="publish-subscribe-pattern.png" caption="figure 19 the Publish/Subscribe Pattern" >}}
 
 There are many parallels between Pub/Sub and the Request/Multi-Response Pattern. The key difference being that Pub/Sub does not rely on or need a Correlation Identity as part of the Message Meta-Data.
 
@@ -282,7 +283,7 @@ It is my opinion that Service B should not increase its extent of spatial coupli
 
 This does mean that the implementation of the Subscriber needs to take account of this design decision. The state that Service A creates and maintains as a result of receiving the published messages from Service B must be kept in a durable, distributed cache accessible to all instances of Service A.
 
-## Topics, Topic Hierarchies and Polymorphism
+# Topics, Topic Hierarchies and Polymorphism
 
 A Topic is a message meta-data property that can be added to the messaging substrate. It is generally implemented as a string.
 There is a parallel to be drawn between the concept of a message's Topic and an Event Type.
@@ -299,7 +300,7 @@ Topics can be used to create interesting scenarios that involve, what I can only
 
 RabbitMQ and Azure Service Bus Queues tend to extensively use the concept of Topics.
 
-## Commands and Events
+# Commands and Events
 
 A Message representing a Command is almost invariably a message sent by a Client. As any information
 emitted by a Client is inherently _untrusted_ by its recipients (Servers), it is useful to model Commands
@@ -310,7 +311,7 @@ Whereas Servers are each the authority over their part of the Solution Domain an
 
 In a .Net world, the standard serializers (e.g. the XML Serializer) do not support serializing of Interfaces and the messaging substrate would need to provide its own serialisation technology; e.g. by making use of Dynamic Proxies. It should be noted that this custom serialisation increases the amount of platform coupling that is present in the Solution Design, but it may be found to be appropriate and so not necessarily bad.
 
-### In-process vs. Distributed Events
+## In-process vs. Distributed Events
 
 It is typical to find that _events_ communicated within a process boundary (i.e. in-process) are
 actually sent via synchronous means using in-memory constructs. It also typical that _events_
@@ -318,7 +319,7 @@ sent between process boundaries, i.e. in a distributed system, are sent asynchro
 
 This difference (synchronous and asynchronous) matters in respect of the certainty that the Publisher can infer about the point in time by when Subscribers are up to date. Synchronous invocation allows the Publisher to infer when state transitions occur, but asynchronous invocations mean that the Publisher cannot know when, or even if, all of its Subscribers are up to date.
 
-## Out of order Events
+# Out of order Events
 
 The problem of receiving and processing Events out of order is probably best illustrated by example.
 
@@ -332,7 +333,7 @@ The Shipping Service is constrained by a business rule that states:
 
 So the Shipping Service also subscribes to the _Order Billed_ Event published by the Billing Service.
 
-{{< figure src="/posts/images/example-distribution-system.png" caption="figure 20 our example distributed system" >}}
+{{< figure src="example-distribution-system.png" caption="figure 20 our example distributed system" >}}
 
 Now consider if the Shipping Service is implemented assuming that the Order Accepted event will always arrive before the Order Billed event. The resultant System will probably pass its tests and be put into Production. Intermittently we will find that it fails to ship all of our accepted and billed Orders. The root cause will be found that occasionally, the Order Billed and Order Accepted events for an Order arrive in the opposite sequence to that expected.
 
@@ -340,20 +341,10 @@ How should the System be amended to eliminate this weakness?
 
 Solution proposals include:
 
-1. Have the Shipping Service check that the events arrive in the expected order and to throw an exception when it is detected that they have arrived out of sequence
+1. Have the Shipping Service check that the events arrive in the expected order and to throw an exception when it is detected that they have arrived out of sequence <div style="padding-left:3em"><p>This could be seen as a case of <i>using Exceptions to implement control of flow</i>, which is generally considered to be an anti-pattern and should be avoided. If it is control of flow then we are flagging an error condition when there is no error present and that can be confusing for all concerned. </p><p>Also, exception handling is an expensive undertaking for the run-time processes concerned; the expense is proportionate to the stack depth at the point when the exception occurs. It is true to say that good service design tends to produce service implementations that do not exhibit deep stacks, which does mitigate that sort of expense. However that is missing the point, handling flow of control using exceptions and error handling will eventually involve the poison letter handling and error queue of the messaging substrate. Our contract on the occupancy of the Error Queue is that they all signal a problem that needs investigation. That is always expensive.</p></div>
+2. Have the Shipping Service detect when an Order Billed event arrives out of order and send it to the back of the Queue to be re-processed again at some future point <div style="padding-left:3em"><p>This is better than solution candidate 1. However it does not mitigate the risk of logical failures in the Billing Service or the Sales Service sending the wrong Order Identity in their published events. </p></div>
 
-<div style="padding-left:3em">
-<p>This could be seen as a case of <i>using Exceptions to implement control of flow</i>, which is generally considered to be an anti-pattern and should be avoided. If it is control of flow then we are flagging an error condition when there is no error present and that can be confusing for all concerned. </p>
-<p>Also, exception handling is an expensive undertaking for the run-time processes concerned; the expense is proportionate to the stack depth at the point when the exception occurs. It is true to say that good service design tends to produce service implementations that do not exhibit deep stacks, which does mitigate that sort of expense. However that is missing the point, handling flow of control using exceptions and error handling will eventually involve the poison letter handling and error queue of the messaging substrate. Our contract on the occupancy of the Error Queue is that they all signal a problem that needs investigation. That is always expensive.</p>
-</div>
-
-1. Have the Shipping Service detect when an Order Billed event arrives out of order and send it to the back of the Queue to be re-processed again at some future point
-
-<div style="padding-left:3em">
-<p>This is better than solution candidate 1. However it does not mitigate the risk of logical failures in the Billing Service or the Sales Service sending the wrong Order Identity in their published events. </p>
-</div>
-
-### The Error Queue
+# The Error Queue
 
 The above scenario begins to question our understanding of the Error Queue used to handle poison
 messages. If we are not careful in the use we make of the Error Queue then we

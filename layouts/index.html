@@ -1,16 +1,39 @@
-{{ partial "header" .}}
 
-<h1>{{ .Title | markdownify }}</h1>
-{{ .Content }}
+{{ define "main" }}
 
-<h2>My most recent Post...</h2>
-{{ $pages := where site.RegularPages "Type" "in" .Site.Params.mainSections }}
-{{ range first 1 $pages }}
-    {{ if in .Site.Params.mainSections "portfolio" }}
-       {{ partial "portfolio/item" .}}
-    {{ else if in .Site.Params.mainSections "posts" }}
-       {{ partial "post/item" .}}
-    {{ end }}
- {{ end }}
-
-{{ partial "footer" .}}
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-no-background">
+        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+        {{ range $paginator.Pages }}
+        {{ if eq .Type "posts" }}
+        {{if and (.IsPage) (.Params.date)}}
+        <a href="{{.Permalink}}" class="a-block">
+            <div class="post-item-wrapper">
+                <article class="post-item post-item-no-divider">
+                    <div class="post-item-info-wrapper">
+                        <header class="post-item-title">
+                            <h1>{{.Title}}</h1>
+                        </header>
+                        <div class="post-item-summary">
+                            {{.Description}}
+                        </div>
+                        <div class="post-item-meta">
+                            {{ .PublishDate.Format "2006-01-02" }}
+                        </div>
+                    </div>
+                    {{ $featured_image := .Params.featured_image }}
+                    {{ if $featured_image }}
+                    <div class="post-item-image-wrapper">
+                        <div class="post-item-image"
+                             style="background-image: url('{{$featured_image | relLangURL }}')"></div>
+                    </div>
+                    {{ end }}
+                </article>
+            </div>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </a>
+    </div>
+</div>
+{{ end }}

@@ -3,6 +3,9 @@ title: "Cross-Cutting Concerns"
 date: 2017-07-03T10:49:19Z
 draft: false
 summary: "Note to self: what are the cross-cutting concerns?"
+categories: ["Software"]
+tags: ["Design"]
+
 ---
 
 My list of cross-cutting concerns for software design and architecture are:

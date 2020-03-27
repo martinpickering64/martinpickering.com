@@ -1,0 +1,33 @@
+{{ $page := .page }}
+{{ $summary := .summary }}
+
+{{/* Get schema type. */}}
+{{ $schema := "Article" }}
+{{ if eq $page.Type "posts" }}
+{{ $schema = "BlogPosting" }}
+{{ end }}
+
+{{ $author := site.Title }}
+
+
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": {{$schema}},
+    "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{$page.Permalink}}
+    },
+    "name": {{$page.Title}},
+    "headline": {{$page.Title}},
+    "datePublished": {{ $page.PublishDate.Format "2006-01-02T15:04:05Z07:00" }},
+    {{with $author}}
+    "author": {
+    "@type": "Person",
+    "name": {{.}}
+    }
+    {{end}}
+    },
+    "description": {{$summary}}
+    }
+</script>

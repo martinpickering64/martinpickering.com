@@ -5,9 +5,11 @@ summary: Given the variety of human languages on this planet, text is a complex 
   because they think of the numerous related software problems in the area, instead
   of focusing on what they can do with their code to help.
 date: 2018-05-02T14:07:51.000+00:00
+categories: ["Software"]
+tags: ["C Language", "i8n"]
 
 ---
-## Encoding text
+# Encoding text
 
 Given the variety of human languages on this planet, text is a complex subject. Many are scared away from
 dealing with the various scripts of the world. This is because they think of the numerous related software
@@ -18,13 +20,13 @@ text. The most difficult work is handled below the application layer, in Operati
 and the 'C' library. To give you an idea of what goes on though, here is a summary of software
 problems surrounding text:
 
-### Encoding
+## Encoding
 
 Mapping characters to numbers. Many such mappings exist; once you know the encoding of a piece
 of text, you know what character is meant by a number. Unicode is one such mapping, and a popular
 one since it incorporates more characters than any other (_currently_).
 
-## Display
+# Display
 
 Once you know what character is meant, you must find a font that has the character and render
 it. This task is much complicated by the need to display both left-to-right and right-to-left
@@ -32,17 +34,17 @@ text, the existence of combining characters that modify previous characters and 
 width, the fact that some languages require wider character cells than others, and context-sensitive
 letterforms.
 
-### Input
+## Input
 
 An input method is a way to map keystrokes (_most likely several keystrokes on a typical keyboard_)
 to characters. Input is also complicated by bi-directional text.
 
-### Internationalization [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
+## Internationalization [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 
 This refers to the practice of translating a program into multiple languages, effectively
 by translating all the program's strings.
 
-### Lexicography
+## Lexicography
 
 Code that processes text as more than just binary data might have to become a lot smarter.
 The problems of searching, sorting, and modifying letter case (_upper/lower_) vary per language.
@@ -112,7 +114,7 @@ without loss. `UTF-8` is a great boon, especially for 'C' programming. Think of 
 it allows you to internationalize an application that would have been difficult to convert
 otherwise, it is much less discriminatory than the alternative.
 
-## The C library
+# The C library
 
 All recent implementations of the standard C library have lots of functions for manipulating
 international strings. Before reading up on them, it helps to know some vocabulary:
@@ -139,6 +141,7 @@ appropriately for the current locale, and `strcoll()` can do international sorti
 and other functions that depend on locale must be initialized at the beginning of your
 program using
 
+{{<highlight c >}}
     #include <locale.h> 
      
     int main() 
@@ -148,6 +151,7 @@ program using
         locale = setlocale(LC_ALL, ""); 
         ... 
     } 
+{{</highlight>}}
 
 You don't have to do anything with the locale string returned by `setlocale()`, but you can
 use it to query your user's locale settings (_more on this later_).
@@ -164,38 +168,33 @@ standard for communicating the encoding of a piece of text; e.g. email messages 
 do it in various ways. You also might be able to do more efficient processing, or avoid
 rewriting code, if you knew the encoding your strings used.
 
-### Your encoding options
+## Your encoding options
 
 You are free to choose a string encoding for internal use in your program. The choice
 pretty much boils down to either `UTF-8`, wide (_4-byte_) characters, or multi-byte. Each
 has its advantages and disadvantages:
 
-UTF-8
-
-* Pro: compatible with all existing strings and most existing code
-* Pro: takes less space
-* Pro: widely used as an interchange format (_e.g. in XML_)
-* Con: more complex processing, `O(n)` string indexing
-
-Wide characters
-
-* Pro: easy to process
-* Con: wastes space
-* Pro/Con: although you can use the syntax `L"Hello, world."` to easily include wide-character
+* UTF-8
+  - Pro: compatible with all existing strings and most existing code
+  - Pro: takes less space
+  - Pro: widely used as an interchange format (_e.g. in XML_)
+  - Con: more complex processing, `O(n)` string indexing
+* Wide characters
+  - Pro: easy to process
+  - Con: wastes space
+  - Pro/Con: although you can use the syntax `L"Hello, world."` to easily include wide-character
   strings in 'C' programs, the size of wide characters is not consistent across platforms
   (_some incorrectly use 2-byte wide characters_)
-* Con: should not be used for output, since spurious zero bytes and other
+  - Con: should not be used for output, since spurious zero bytes and other
   low-ASCII characters with common meanings (_such as `/` and `\n`_) will likely be
   sprinkled throughout the data.
-
-Multi-byte
-
-* Pro: no conversions ever needed on input and output
-* Pro: built-in C library support
-* Pro: provides the widest possible internationalization, since in rare cases
+* Multi-byte
+  - Pro: no conversions ever needed on input and output
+  - Pro: built-in C library support
+  - Pro: provides the widest possible internationalization, since in rare cases
   conversion between local encodings and Unicode does not work well
-* Con: strings are opaque
-* Con: perpetuates incompatibilities. For example, there are three major
+  - Con: strings are opaque
+  - Con: perpetuates incompatibilities. For example, there are three major
   encodings for Russian. If one Russian sends data to another through your
   program, the recipient will not be able to read the message if his or her
   computer is configured for a different Russian encoding. But if your program
@@ -208,7 +207,7 @@ locale, in which case you won't even have to do any conversions. Otherwise you w
 have to convert multi-byte to wide to `UTF-8` on input, and back to multi-byte on
 output. Nevertheless, `UTF-8` has its advantages.
 
-## What to do right now
+# What to do right now
 
 Below I outline concrete steps any 'C' programmer could take to bring their code up to
 date with respect to text encoding. I also present a simple C library that provides the
@@ -216,31 +215,35 @@ routines needed to manipulate `UTF-8`.
 
 Here's the to-do list:
 
-### "char" no longer means character
+## "char" no longer means character
 
 I recommend referring to character codes in C programs using a 32-bit unsigned integer
 type. Many platforms provide a `wchar_t` (_wide character_) type, but unfortunately it is
 to be avoided since some compilers allot `wchar_t` only 16-bits; not enough to represent Unicode.
 Wherever it is needed to pass around an individual character, change `char` to `unsigned int` or similar. The only remaining use for the `char` type is to mean `byte`.
 
-### Get UTF-8-clean
+## Get UTF-8-clean
 
 To take advantage of `UTF-8`, treat bytes higher than 127 as perfectly ordinary characters.
 For example, a routine that recognizes valid identifier names for a programming language. The
 existing technique might involve identifiers begining with a letter:
 
+{{<highlight c >}}
     int valid_identifier_start(char ch) 
     { 
         return ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')); 
     } 
+{{</highlight>}}
 
 Using `UTF-8`, letters from other languages are allowed for as follows:
 
+{{<highlight c >}}
     int valid_identifier_start(char ch) 
     { 
         return ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') || 
                 ((unsigned char)ch >= 0xC0)); 
     } 
+{{</highlight>}}
 
 A `UTF-8` sequence can only start with values `0xC0` or greater, so that's what is
 used for checking the start of an identifier. Within an identifier, also allow
@@ -261,7 +264,7 @@ longer bytes. Any such code will need to be found and fix any code that assumes 
 is the number of characters between `a` and `b` (though it is still of course the number of bytes
 between `a` and `b`_).
 
-### Interface with the environment
+## Interface with the environment
 
 Using `UTF-8` as an internal encoding is now widespread among 'C' programmers. However,
 the environment the program runs in will not necessarily be nice enough to feed
@@ -277,7 +280,7 @@ Otherwise, convert from multi-byte to wide to `UTF-8`.
 Version 1.6 (_1.5.x while in development_) of the FOX toolkit uses `UTF-8` internally, giving
 dependent programs a nice _all-UTF-8-all-the-time environment_. GTK2 and Qt also support `UTF-8`.
 
-### Modify APIs to discourage `O(n^2)` string processing
+## Modify APIs to discourage `O(n^2)` string processing
 
 The idea of non-constant-time string indexing may be a worry. But the reality is there
 is rarely a need to specifically access the _nth_ character of a string. Algorithms almost
@@ -290,7 +293,7 @@ Use `u8_inc()` and `u8_dec()` to move through strings. In any libraries develope
 to expose some kind of `inc()` and `dec()` API so nobody has to move through a string
 by repeatedly requesting the _nth_ character.
 
-## Some `UTF-8` routines
+# Some `UTF-8` routines
 
 Various libraries are available for internationalization and converting between different
 text encodings. However, there does not appear to be a straightforward set of 'C' routines
@@ -313,7 +316,7 @@ the 'C' library can handle that. If the current locale is not `UTF-8`, call `mbs
 user input to convert any encoding (_whatever it is_) to a wide character string, then
 use `u8_toutf8()` to convert it to the `UTF-8`. Here's an example input routine wrapping `readline()`:
 
-``` 
+{{<highlight c >}}
 char *get_utf8_input() 
 { 
     char *line, *u8s; 
@@ -334,15 +337,16 @@ char *get_utf8_input()
         free(wcs); 
         return u8s; 
     } 
-```
+{{</highlight>}}
 
 The first call to `mbstowcs()` uses the special parameter value `NULL` to find the number of
 characters in the opaque multi-byte string.
 
 The routines are divided into four groups:
 
-### Group 1: conversions
+## Group 1: conversions
 
+{{<highlight c >}}
     /* is c the start of a utf8 sequence? */ 
     #define isutf(c) (((c)&0xC0)!=0x80) 
      
@@ -360,6 +364,7 @@ The routines are divided into four groups:
      
     /* single character to UTF-8 */ 
     int u8_wc_toutf8(char *dest, wchar_t ch); 
+{{</highlight>}}
 
 Note that the library uses `unsigned int` as its wide character type.
 
@@ -369,8 +374,9 @@ really matters. Recall that a `UTF-8` string can usually be treated like a norma
 C-string with N characters (_where N is the number of bytes in the UTF-8 sequence_),
 with the possibility that some characters are > 127.
 
-### Group 2: moving through UTF-8 strings
+## Group 2: moving through UTF-8 strings
 
+{{<highlight c >}}
     /* character number to byte offset */ 
     int u8_offset(char *str, int charnum); 
      
@@ -385,14 +391,16 @@ with the possibility that some characters are > 127.
      
     /* move to previous character */ 
     void u8_dec(char *s, int *i); 
+{{</highlight>}}
 
-### Group 3: Unicode escape sequences
+## Group 3: Unicode escape sequences
 
 In the absence of Unicode input methods, Unicode characters are often notated
 using special escape sequences beginning with`\u` or `\U`. `\u` expects up to four
 hexadecimal digits, and `\U` expects up to eight. With these routines a program can
 accept input and give output using such sequences if necessary.
 
+{{<highlight c >}}
     /* assuming src points to the character after a backslash, 
        read an escape sequence, storing the result in dest and 
        returning the number of input characters processed */ 
@@ -414,9 +422,11 @@ accept input and give output using such sequences if necessary.
     /* utility predicates used by the above */ 
     int octal_digit(char c); 
     int hex_digit(char c); 
+{{</highlight>}}
 
-### Group 4: replacements for standard functions
+## Group 4: replacements for standard functions
 
+{{<highlight c >}}
     /* return a pointer to the first occurrence of ch in s, or 
        NULL if not found. character index of found character 
        returned in *charn. */ 
@@ -438,3 +448,4 @@ accept input and give output using such sequences if necessary.
        if is_locale_utf8 */ 
     int u8_vprintf(char *fmt, va_list ap); 
     int u8_printf(char *fmt, ...); 
+{{</highlight>}}

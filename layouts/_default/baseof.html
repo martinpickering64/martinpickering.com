@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+    {{- partial "head.html" . -}}
+<body>
+    <div id="app">
+        {{- partial "sidebar.html" . -}}
+        {{- partial "extrabar.html" . -}}
+        <!-- PC view -->
+        {{- partial "mobile-header.html" . -}}
+        <!-- mobile header -->
+        <div id="content">
+            {{- block "main" . }}{{- end }}
+        </div>
+
+        {{- partial "mobile-footer.html" . -}}
+        <!-- mobile footer -->
+    </div>
+    <script src="{{.Site.BaseURL}}/js/journal.js"></script>
+    <script src="/__/firebase/7.3.0/firebase-app.js"></script>
+    <script src="/__/firebase/7.3.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/7.3.0/firebase-performance.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script>
+        var perf = firebase.performance();
+    </script>
+</body>
+</html>
