@@ -33,6 +33,9 @@ The photo above shows that some of the timber gathering has also begun with a fe
 snedded and awaiting further processing. It looks like three of these are destined to become the 
 tallest, central roof supports.
 
+{{<figure src="../before-work-started.jpg" 
+caption="This is what the quarry site looked like prior to the Roundhouse Project. The photo is taken from alomost the same position as the first photo on this page.">}}
+
 Finally, we were given one piece of disappointing news. The Project has been delayed. This is 
 because final planning permission from CWAC has not yet arrived. Until it does, no further 
 work can begin.
