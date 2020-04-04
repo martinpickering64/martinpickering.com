@@ -4,7 +4,7 @@ date: 2019-01-30T10:49:19Z
 draft: false
 summary: "And a new work agreement for me"
 categories: ["Beeston Castle"]
-tags: ["Archaeology", "Bronze Age", "Roundhouse"]
+tags: ["Bronze Age", "Roundhouse"]
 
 ---
 {{<figure src="../postHoles.jpg" caption="Post Holes appear">}}

@@ -4,7 +4,7 @@ date: 2019-03-17T10:49:19Z
 draft: false
 summary: "We might be raising the Roof Posts."
 categories: ["Beeston Castle"]
-tags: ["Archaeology", "Bronze Age", "Roundhouse"]
+tags: ["Bronze Age", "Roundhouse"]
 
 ---
 Build Week 4 underway.

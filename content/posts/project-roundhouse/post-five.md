@@ -4,7 +4,7 @@ date: 2019-02-09T10:49:19Z
 draft: false
 summary: "It begins"
 categories: ["Beeston Castle"]
-tags: ["Archaeology", "Bronze Age", "Roundhouse"]
+tags: ["Bronze Age", "Roundhouse"]
 
 ---
 The Project schedule has been set out into 14 Build Weeks. These Build Weeks are spread

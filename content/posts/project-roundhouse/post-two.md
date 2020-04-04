@@ -4,7 +4,7 @@ date: 2019-01-10T10:49:19Z
 draft: false
 summary: "Induction and indoctrination done"
 categories: ["Beeston Castle"]
-tags: ["Archaeology", "Bronze Age", "Roundhouse"]
+tags: ["Bronze Age", "Roundhouse"]
 
 ---
 Today saw the Beeston Castle Roundhouse Project get underway. The first activity was for the 

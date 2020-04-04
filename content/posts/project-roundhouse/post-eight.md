@@ -4,7 +4,7 @@ date: 2019-03-06T10:49:19Z
 draft: false
 summary: "Pictures by fellow Builder, Dave Trevor"
 categories: ["Beeston Castle"]
-tags: ["Archaeology", "Bronze Age", "Roundhouse"]
+tags: ["Bronze Age", "Roundhouse"]
 
 ---
 Dave Trevor is a fellow Core Team member of the Beeston Castle Roundhouse Team. He 

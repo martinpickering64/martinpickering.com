@@ -4,7 +4,7 @@ date: 2019-01-17T10:49:19Z
 draft: false
 summary: "But it is conditional"
 categories: ["Beeston Castle"]
-tags: ["Archaeology", "Bronze Age", "Roundhouse"]
+tags: ["Bronze Age", "Roundhouse"]
 
 ---
 Great news today, Planning Permission from CWAC has arrived. So, we can begin Project Roundhouse.

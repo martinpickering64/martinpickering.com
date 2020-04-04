@@ -4,7 +4,7 @@ date: 2019-02-17T10:49:19Z
 draft: false
 summary: "Stripping bark"
 categories: ["Beeston Castle"]
-tags: ["Archaeology", "Bronze Age", "Roundhouse"]
+tags: ["Bronze Age", "Roundhouse"]
 
 ---
 Build Week 2 underway.
