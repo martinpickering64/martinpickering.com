@@ -66,7 +66,7 @@ I was left there all on my own for blinking ages #School-Boy-Error!!!
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OzfbFbKVvqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Just a little bit of information to properly round out all that occurred during the day...
-Beeston Catsle also hosted two delegations from the Met Police Close Protection Squad. We helped 
+Beeston Castle also hosted two delegations from the Met Police Close Protection Squad. We helped 
 them out in the final assessments of new Officers by performing as unruly crowds and "**attacking**" their VIP! _(with a rubber imitation hand axe)_
 
 Interesting times.
