@@ -35,6 +35,7 @@ For those not directly involved in those tasks there was plenty of other work:
 {{<figure src="../dead-hedge.jpg" caption="About 120m of Dead Hedge created to protect the site and to try and avoid visitors falling down the many (14) Post Holes, which are at least 1.5m deep.">}}
 {{<figure src="../woven-fence.jpg" caption="Also, there's about 35m of woven fencing to repel invaders.">}}
 
+{{<figure src="../gently-does-it.jpg" caption="Some careful positioning of the Roof Posts was required. The X-Frame was to lift the post to such an angle that it could be located on the ramp with its foot at the bottom of its Post Hole. This was to give us a better angle for lifting it to its final position and also to help prevent the post from just sliding across the ground as we tried to lift it.">}}
 {{<figure src="../almost-ready-for-post-raising.jpg" caption="By the end of Monday, we had the site almost ready for the lift. Still some tidying to do. But nearly there.">}}
 
 Normally, the site is limited to no more than about 20 people so as not to compromise safety. Tuesday saw an extra 
@@ -80,4 +81,6 @@ two-thirds of all the Wall Posts vertical as well.
 {{<figure src="../wide-angled-artistry.jpg" caption="An alternative view via some wide-angled artistry">}}
 
 
-A good amount of progress, overall.
+A good amount of progress, overall. 
+
+{{<figure src="../IMG_8718--bw.jpg" caption="So let's end with a little bit of moody photography work by Dave Trevor">}}
