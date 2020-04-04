@@ -58,11 +58,10 @@ This video (excuse the quality) shows our first failed attempt to raise a Roof P
 {{<figure src="../an-entirely-different-outcome.jpg" caption="An entirely different outcome was achieved">}}
 {{<figure src="../all-3-posts-upright.jpg" caption="By the end of the day all 3 posts were vertical.">}}
 
-The last Post up was a still bit wobbly and I was asked to to stabilise it while the 
+The last Post up was a still bit wobbly and I was asked to stabilise it while the 
 rest of the Team decided on what to do.
-Trouble is they decided to to do their planning down at the local Pub. 
 
-I was left there all on my own for blinking ages #School-Boy-Error!!!
+Trouble is they decided to to do their planning down at the local Pub. I was left there all on my own for blinking ages #School-Boy-Error!!!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OzfbFbKVvqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -74,7 +73,7 @@ Interesting times.
 
 Work for Wednesday and Thrusday has been cancelled due to the high winds and Beeston Castle is closed.
 
-Progress on Friday though, after the winds had died down, was at a pace. By the end of the day, we had about 
+Progress on Friday, after the winds had died down, was at a pace. By the end of the day, we had about 
 two-thirds of all the Wall Posts vertical as well.
 
 {{<figure src="../2-thirds-wall-posts-up.jpg" caption="Surveying our progress.">}}

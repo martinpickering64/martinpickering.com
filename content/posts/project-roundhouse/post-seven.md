@@ -20,7 +20,7 @@ Targets for this week are:
 
 {{<figure src="../death-star.jpg" caption="But first, a late proposal for a small design amendment was received.">}}
 
-Mold is not all that far away from Beeston Catsle. This discovery of a fantastic 
+Mold is not all that far away from Beeston Castle. This discovery of a fantastic 
 golden cape dated to the Bronze Age shows that our Bronze Age breathern were 
 not all that disimilar to us in that beautiful, well made stuff was very 
 much appreciated. I wonder if the owner of this cape ever visited our Beeston settlement?
