@@ -32,6 +32,9 @@ For those not directly involved in those tasks there was plenty of other work:
 * Continue the dead hedge around the site to provide a clear demarcation between what is and is not a building site. This is in preparation for Beeston Castle opening for 2019's Visitors.
 * Strip more bark
 
+{{<figure src="../ash-poles.jpg" caption="Some of the Ash Poles (8m+ long) to be used as Roof Beams. We've also obtained a quantity of Hazel Poles to make into Roof Spars.">}}
+{{<figure src="../stripping-ash.jpg" caption="Striping bark is a never ending task.">}}
+
 {{<figure src="../dead-hedge.jpg" caption="About 120m of Dead Hedge created to protect the site and to try and avoid visitors falling down the many (14) Post Holes, which are at least 1.5m deep.">}}
 {{<figure src="../woven-fence.jpg" caption="Also, there's about 35m of woven fencing to repel invaders.">}}
 
@@ -76,6 +79,8 @@ Work for Wednesday and Thrusday has been cancelled due to the high winds and Bee
 Progress on Friday, after the winds had died down, was at a pace. By the end of the day, we had about 
 two-thirds of all the Wall Posts vertical as well.
 
+{{<figure src="../wall-post-installation.jpg" caption="Space is tight when holding up a wall post and others are tamping the post hole in-fill to consolidate the erection. #trusting">}}
+{{<figure src="../committee-meeting.jpg" caption="Committee Meeting... Do you know what it is yet?">}}
 {{<figure src="../2-thirds-wall-posts-up.jpg" caption="Surveying our progress.">}}
 {{<figure src="../wide-angled-artistry.jpg" caption="An alternative view via some wide-angled artistry">}}
 
