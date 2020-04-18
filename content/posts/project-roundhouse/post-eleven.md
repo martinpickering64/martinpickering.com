@@ -42,3 +42,5 @@ caption="By the end of Build Week 6, both wall plates are complete and we're rea
 
 Here's a short video of the last part of the Wall Plate going into position.
 {{<youtube EGt8FAI9mu8>}}
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/04/11/beeston-bronze-age-structure-construction-week-5/)

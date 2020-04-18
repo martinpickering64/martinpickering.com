@@ -55,3 +55,5 @@ Gardeners' World Live.
 {{<figure src="../progress-but-not-as-we-would-like.jpg" caption="By the end of the very wet week, an exhausted build team retired to the Pub to review this week's progress.">}}
 
 You can also see the drains have begun to do their thing as there is no longer any standing water around the building.
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/06/11/beeston-bronze-age-structure-construction-week-9/)

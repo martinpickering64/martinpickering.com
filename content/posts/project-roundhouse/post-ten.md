@@ -41,3 +41,4 @@ After this week's labour, significant progress has been made.
 
 {{<figure src="../ready-for-hoisting.jpg" caption="Many of the parts for the Wall Plate are now ready and have been put into position ready for hoisting into position during the next Build Week.">}}
 
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/03/29/beeston-bronze-age-structure-construction-week-4/)

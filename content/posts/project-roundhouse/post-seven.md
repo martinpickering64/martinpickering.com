@@ -76,3 +76,5 @@ So, week 3 is over. A lot of work done. A lot more yet to do. Last job is to tid
 and leave things in a good place for the next Build Week, which won't be for a little while now.
 
 {{<figure src="../week-3-tidy-friday.jpg" caption="Tidy Friday!">}}
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/03/01/beeston-bronze-age-structure-construction-week-2/)

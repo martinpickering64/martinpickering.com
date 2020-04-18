@@ -58,3 +58,5 @@ were to make Peg Tenons on the end of _scrap_ logs. Eventually, we will be makin
 Roof and Wall Posts. But there are still acres of bark to be stripped.
 
 {{<figure src="../peg-tenon.jpg" caption="A Peg Tenon, created as a practice piece and a hint at work to come.">}}
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/02/15/beeston-bronze-age-structure-construction-week-1/)

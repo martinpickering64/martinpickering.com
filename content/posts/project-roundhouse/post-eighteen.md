@@ -51,3 +51,5 @@ annexe using a material that Beeston Castle has an excess of. Namely, Bracken.
 {{<figure src="../in-need-of-a-tidy.jpg" caption="Although, there is still tidying and dressing work to do.">}}
 
 {{<figure src="../view-of-the-roof-week-12.jpg" caption="At the end of Week 12, we have a very attractive thatched Roundhouse.">}}
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/08/20/beeston-bronze-age-structure-construction-week-11/)

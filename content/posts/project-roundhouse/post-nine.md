@@ -88,3 +88,5 @@ two-thirds of all the Wall Posts vertical as well.
 A good amount of progress, overall. 
 
 {{<figure src="../IMG_8718--bw.jpg" caption="So let's end with a little bit of moody photography work by Dave Trevor">}}
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/03/18/beeston-bronze-age-structure-construction-week-3/)

@@ -65,4 +65,6 @@ So, that's the end of the Build Phase of the Beeston Bronze Age Roundhouse Proje
 2. Fire Training on 7th November
 
 It's now over to English Heritage to decide what's going to happen now, what they want to do with their Roundhouse
- and how they wish to make use of a great and talented team of volunteers.
+and how they wish to make use of a great and talented team of volunteers.
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/10/02/beeston-bronze-age-structure-construction-week-13/)

@@ -60,3 +60,5 @@ that was a lot of thatch and we had best crack on!
 Let's finish off with a little video of what has been going on this week.
 
 {{<youtube O7si_ucM7pQ>}}
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/06/11/beeston-bronze-age-structure-construction-week-8/)

@@ -64,3 +64,5 @@ all that has been going on.
 
 Let's finish with a bit more of Dave Trevor's photography...
 {{<figure src="../artistic-roof.jpg" caption="Looking up from the centre of the building.">}}
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/05/07/beeston-bronze-age-structure-week-6/)

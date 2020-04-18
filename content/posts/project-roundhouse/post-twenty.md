@@ -53,6 +53,8 @@ But horror or horrors! Right at the start of this build week the handle for this
 
 {{<figure src="../broken-adze.jpg" caption="Our prized steel adze, in pieces!">}}
 
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/10/02/beeston-bronze-age-structure-construction-week-12/)
+
 This was almost too much to bear and there was much wailing and crying and excalamations like 
 "_if you think I'm gonna use any of those other crappy adzes think again!_". But after a cup of calming
 tea and Bourbon Biscuit or two, sense prevailed. We have been building up a wealth of wood working skills

@@ -59,6 +59,6 @@ This will involve
 On Day 5, an inevitable winter storm blew its way in and the high winds meant 
 that Beeston Castle had to remain closed. So no work done that day.
 
-
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/02/11/beeston-bronze-age-structure-induction-week/)
 
 

@@ -78,3 +78,5 @@ Build Week 8 done. Nothing more now until June.
 
 * [The Telegraph has featured Beeston Castle Roundhouse](https://www.telegraph.co.uk/travel/destinations/europe/united-kingdom/articles/bronze-age-britain/)
 * [And so has Cheshire News](https://www.cheshire-live.co.uk/news/chester-cheshire-news/english-heritage-recreating-bronze-age-16289394)
+
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/05/24/beeston-bronze-age-structure-construction-week-7/)
