@@ -18,7 +18,7 @@ to add some files, or you mess up your commit message. If you want to redo that
 commit, make the additional changes you forgot, stage them, and commit again using the `--amend` option:
 
 {{<highlight bash>}}
-$ git commit –amend
+$ git commit --amend
 {{</highlight>}}
  
 This command takes your staging area and uses it for the commit. If you've made no changes since your 
