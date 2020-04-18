@@ -60,6 +60,7 @@ caption="All of the Roof Beams are now up. I'm betting this is going to be a fav
 Here's a quick video cataloguing site activity for Build Week 7. It gives a flavour of 
 all that has been going on.
 
-<iframe width="420" height="237" src="https://www.youtube.com/embed/zYcZOTI68_M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube zYcZOTI68_M>}}
+
 Let's finish with a bit more of Dave Trevor's photography...
 {{<figure src="../artistic-roof.jpg" caption="Looking up from the centre of the building.">}}

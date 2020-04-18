@@ -54,7 +54,7 @@ for Team Members to take shelter in. It was also very well equipped with Tea, Co
 
 This video (excuse the quality) shows our first failed attempt to raise a Roof Post. But as they say, every failure is also a learning opportunity.
 
-<iframe width="420" height="237" src="https://www.youtube.com/embed/DH6F1bdMNcc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube DH6F1bdMNcc>}}
 
 {{<figure src="../after-some-thought.jpg" caption="But after some thinking...">}}
 {{<figure src="../some-replanning.jpg" caption="A certain amount of replanning and redisposition of troops and resources...">}}
@@ -66,7 +66,7 @@ rest of the Team decided on what to do.
 
 Trouble is they decided to to do their planning down at the local Pub. I was left there all on my own for blinking ages #School-Boy-Error!!!
 
-<iframe width="420" height="237" src="https://www.youtube.com/embed/OzfbFbKVvqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube OzfbFbKVvqA>}}
 
 Just a little bit of information to properly round out all that occurred during the day...
 Beeston Castle also hosted two delegations from the Met Police Close Protection Squad. We helped 

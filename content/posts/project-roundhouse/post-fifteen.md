@@ -59,4 +59,4 @@ that was a lot of thatch and we had best crack on!
 
 Let's finish off with a little video of what has been going on this week.
 
-<iframe width="420" height="237" src="https://www.youtube.com/embed/O7si_ucM7pQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube O7si_ucM7pQ>}}

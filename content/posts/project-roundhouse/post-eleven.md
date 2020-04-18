@@ -41,4 +41,4 @@ create pegs rapidly.
 caption="By the end of Build Week 6, both wall plates are complete and we're ready for the roof">}}
 
 Here's a short video of the last part of the Wall Plate going into position.
-<iframe width="420" height="237" src="https://www.youtube.com/embed/EGt8FAI9mu8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{<youtube EGt8FAI9mu8>}}
