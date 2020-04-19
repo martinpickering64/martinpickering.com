@@ -56,7 +56,7 @@ Untracked files:
 
     README
 
-nothing added to commit but untracked files present (use "git add" to track)
+nothing added to commit but untracked files present (use `git add` to track)
 {{</highlight>}}
  
 You can see that your new README file is untracked, because it's under the "Untracked files" 
@@ -68,7 +68,7 @@ include. As you do want to start including README, you need to start tracking th
 
 ## Tracking New Files
 
-In order to begin tracking a new file, you use the command git add. To begin tracking the 
+In order to begin tracking a new file, you use the command `git add`. To begin tracking the 
 README file, you can run this:
 
 {{<highlight bash>}}
@@ -98,7 +98,7 @@ file or a directory; if it's a directory, the command adds all the files in that
 ## Staging Modified Files
 
 Let's change a file that was already tracked. If you change a previously tracked file called 
-CONTRIBUTING.md and then run your git status command again, you get something that looks like this:
+CONTRIBUTING.md and then run your `git status` command again, you get something that looks like this:
 
 {{<highlight bash>}}
 $ git status
@@ -167,7 +167,7 @@ It turns out that Git stages a file exactly as it is when you run the `git add` 
 If you commit now, the version of CONTRIBUTING.md as it was when you last ran the `git add` 
 command is how it will go into the commit, not the version of the file as it 
 looks in your working directory when you run `git commit`. If you modify a file after 
-you run `git add`, you have to run git add again to stage the latest version of the file:
+you run `git add`, you have to run `git add` again to stage the latest version of the file:
 
 {{<highlight bash>}}
 $ git add CONTRIBUTING.md
@@ -187,7 +187,7 @@ Sometimes there are classes of files that you don't want Git to automatically
 add or even show you as being untracked. These are generally automatically generated 
 files such as log files or files produced by your build system. In such cases, you 
 can create a file listing patterns to match them named `.gitignore`. Here is an 
-example `.gitignore` file:
+example `.gitignore` file:fs
 
 {{<highlight bash>}} 
 $ cat .gitignore
