@@ -4,7 +4,7 @@ date: 2018-01-07T10:49:19Z
 summary: "Oops, how do I get out of that?"
 draft: false
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 

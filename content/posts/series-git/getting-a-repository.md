@@ -4,7 +4,7 @@ date: 2018-01-04T13:49:19Z
 summary: "Intialising and cloning..."
 draft: false
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 

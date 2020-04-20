@@ -4,7 +4,7 @@ date: 2018-01-10T10:49:19Z
 summary: "No man is an island."
 draft: false
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 To be able to collaborate on any Git project, you need to know how to manage your remote repositories. 

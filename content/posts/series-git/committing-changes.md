@@ -4,7 +4,7 @@ date: 2018-01-04T15:49:19Z
 summary: "Making history"
 draft: false
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 

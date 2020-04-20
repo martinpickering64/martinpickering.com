@@ -4,7 +4,7 @@ date: 2018-01-10T11:49:19Z
 summary: "Marking significant points in history."
 draft: false
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
  

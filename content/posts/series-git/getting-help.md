@@ -4,7 +4,7 @@ date: 2018-01-04T12:49:19Z
 summary: "RTFM!"
 draft: false
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 

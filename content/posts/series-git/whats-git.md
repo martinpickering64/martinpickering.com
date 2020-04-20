@@ -4,7 +4,7 @@ date: 2018-01-04T10:49:19Z
 draft: false
 summary: "And is it GIT, Git or git?"
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 # What is Git?

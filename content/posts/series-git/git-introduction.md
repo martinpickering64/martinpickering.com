@@ -4,7 +4,7 @@ date: 2018-01-04T10:49:19Z
 draft: false
 summary: "Git's terminology and the like"
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 Even though Git's user interface appears fairly similar to other VCSs, Git 

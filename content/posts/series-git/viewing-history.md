@@ -4,7 +4,7 @@ date: 2018-01-06T16:49:19Z
 summary: "What has happened here then?"
 draft: false
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 

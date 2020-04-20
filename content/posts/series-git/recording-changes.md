@@ -4,7 +4,7 @@ date: 2018-01-04T14:49:19Z
 summary: "Let's get some work done."
 draft: false
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 

@@ -4,7 +4,7 @@ date: 2018-01-04T11:49:19Z
 draft: false
 summary: "Configuring your Git installation"
 categories: ["Software"]
-tags: ["GIT"]
+tags: ["Git"]
 
 ---
 `git config` lets you view and set configuration variables that control all aspects of 
