@@ -9,5 +9,7 @@ categories: ["Family"]
 
 {{<youtube cu9m65IMqkU>}}
 
+The man of the moment along with proud (and relieved) parents.
+
 {{<figure src="../seans-graduation.jpg">}}
 
