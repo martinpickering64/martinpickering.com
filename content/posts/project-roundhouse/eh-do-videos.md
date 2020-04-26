@@ -3,7 +3,7 @@ title: "English Heritage Beeston Castle Roundhouse Videos"
 date: 2020-04-21T10:49:19Z
 summary: "English Heritage publish some videos about the Roundhouse."
 draft: false
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

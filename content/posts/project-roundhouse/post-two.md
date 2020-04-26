@@ -3,7 +3,7 @@ title: "The Project gets underway"
 date: 2019-01-10T10:49:19Z
 draft: false
 summary: "Induction and indoctrination done"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

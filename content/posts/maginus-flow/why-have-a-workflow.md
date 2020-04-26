@@ -3,7 +3,7 @@ title: "Why have a Git Workflow?"
 date: 2018-08-16T11:49:19Z
 draft: false
 summary: "Good, now that is the right question..."
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

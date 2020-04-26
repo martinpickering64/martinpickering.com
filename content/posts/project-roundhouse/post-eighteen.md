@@ -3,7 +3,7 @@ title: "Build Week 12, 15th July 2019"
 date: 2019-07-21T10:49:19Z
 summary: "Back in the saddle."
 draft: false
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

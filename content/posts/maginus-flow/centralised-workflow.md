@@ -3,7 +3,7 @@ title: "The Centralised Workflow"
 date: 2018-08-18T10:49:19Z
 draft: false
 summary: "Are you transitioning from a Centralised Version Control System?"
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

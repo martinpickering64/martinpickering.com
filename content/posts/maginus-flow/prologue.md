@@ -3,7 +3,7 @@ title: "Maginus Flow - Prologue"
 date: 2018-08-16T10:49:19Z
 draft: false
 summary: "A Git workflow for Maginus"
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

@@ -3,7 +3,7 @@ title: "Build Week 1, 4th Feb 2019"
 date: 2019-02-09T10:49:19Z
 draft: false
 summary: "It begins"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

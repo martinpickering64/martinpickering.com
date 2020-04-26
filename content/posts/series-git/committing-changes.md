@@ -3,7 +3,7 @@ title: "Committing changes"
 date: 2018-01-04T15:49:19Z
 summary: "Making history"
 draft: false
-categories: ["Software"]
+categories: Software
 tags: ["Git"]
 
 ---

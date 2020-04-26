@@ -3,7 +3,7 @@ title: "Fire Training, 7th Nov 2019"
 date: 2019-11-08T10:49:19Z
 summary: "English Heritage certify me."
 draft: false
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

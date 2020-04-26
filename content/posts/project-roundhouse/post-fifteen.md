@@ -3,7 +3,7 @@ title: "Build Week 9, 3rd June 2019"
 date: 2019-06-09T10:49:19Z
 summary: "The Thatch arrives."
 draft: false
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

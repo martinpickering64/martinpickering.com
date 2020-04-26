@@ -3,7 +3,7 @@ title: "Build Week 4, 11th March 2019"
 date: 2019-03-17T10:49:19Z
 draft: false
 summary: "We might be raising the Roof Posts."
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

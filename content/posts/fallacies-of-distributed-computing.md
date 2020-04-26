@@ -3,7 +3,7 @@ title: "The Fallacies of Distributed Computing"
 date: 2017-06-27T10:49:19Z
 draft: false
 summary: "A collection of notes from various sources."
-categories: ["Software"]
+categories: Software
 tags: ["Design", "Distributed Computing"]
 
 ---

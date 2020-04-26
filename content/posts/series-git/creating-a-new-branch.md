@@ -3,7 +3,7 @@ title: "Creating a new Branch"
 date: 2018-01-11T12:49:19Z
 summary: "Creaing a new divergence."
 draft: false
-categories: ["Software"]
+categories: Software
 tags: ["Git"]
 
 ---

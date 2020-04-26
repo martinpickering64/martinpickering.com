@@ -3,7 +3,7 @@ title: "Build Week 8, 13th May 2019"
 date: 2019-05-19T10:49:19Z
 draft: false
 summary: "Lashings of Hazel go onto the roof."
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

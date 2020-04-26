@@ -3,7 +3,7 @@ title: "Git Oneflow"
 date: 2018-08-18T16:49:19Z
 draft: false
 summary: "Its like Gitflow, but simpler."
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

@@ -3,7 +3,7 @@ title: "Build Week 10, 10th June 2019"
 date: 2019-06-16T10:49:19Z
 summary: "Thatching in the rain."
 draft: false
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

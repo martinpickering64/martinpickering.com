@@ -3,7 +3,7 @@ title: "My fifteen seconds"
 date: 2019-05-27T10:49:19Z
 summary: "We're on Telly!"
 draft: false
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

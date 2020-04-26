@@ -3,7 +3,7 @@ title: "Build Week 11, 8th July 2019"
 date: 2019-07-14T10:49:19Z
 summary: "I miss the week."
 draft: false
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

@@ -3,7 +3,7 @@ title: "Gitflow"
 date: 2018-08-18T12:49:19Z
 draft: false
 summary: "The most popular Git Workflow."
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

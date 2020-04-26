@@ -3,7 +3,7 @@ title: "Some more Beeston Castle Roundhouse pictures"
 date: 2019-03-06T10:49:19Z
 draft: false
 summary: "Pictures by fellow Builder, Dave Trevor"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

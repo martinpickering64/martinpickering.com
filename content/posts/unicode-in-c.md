@@ -5,7 +5,7 @@ summary: Given the variety of human languages on this planet, text is a complex 
   because they think of the numerous related software problems in the area, instead
   of focusing on what they can do with their code to help.
 date: 2018-05-02T14:07:51.000+00:00
-categories: ["Software"]
+categories: Software
 tags: ["C Language", "i8n"]
 
 ---

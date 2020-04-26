@@ -3,7 +3,7 @@ title: "Integration Manager Workflow"
 date: 2018-08-18T14:49:19Z
 draft: false
 summary: "Generally found at GitHub and GitLab."
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

@@ -3,7 +3,7 @@ title: "Dictator and Lieutenants Workflow"
 date: 2018-08-18T15:49:19Z
 draft: false
 summary: "Open-Source anyone?"
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

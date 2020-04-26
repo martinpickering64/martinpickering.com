@@ -3,7 +3,7 @@ title: "A fly-by of several Git Workflows"
 date: 2018-08-16T12:49:19Z
 draft: false
 summary: "What's already out there?"
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

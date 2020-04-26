@@ -3,7 +3,7 @@ title: "Branching"
 date: 2018-01-11T11:49:19Z
 summary: "How to diverge from the main line."
 draft: false
-categories: ["Software"]
+categories: Software
 tags: ["Git"]
 
 ---

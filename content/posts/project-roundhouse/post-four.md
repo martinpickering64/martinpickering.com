@@ -3,7 +3,7 @@ title: "More site preparations"
 date: 2019-01-30T10:49:19Z
 draft: false
 summary: "And a new work agreement for me"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

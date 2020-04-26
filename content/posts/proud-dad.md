@@ -2,8 +2,8 @@
 title: "Proud Dad"
 date: 2019-07-19T10:49:19Z
 draft: false
-categories: ["Family"]
-
+categories: Family
+disableToC: true
 ---
 ## Introducing Sean Pickering Esq. Master of Engineering with Honours.
 

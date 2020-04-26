@@ -3,7 +3,7 @@ title: "Branching Workflows"
 date: 2018-01-13T09:49:19Z
 summary: "What can/should you do with branches?"
 draft: false
-categories: ["Software"]
+categories: Software
 tags: ["Git"]
 
 ---

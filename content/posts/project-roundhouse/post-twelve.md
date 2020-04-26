@@ -3,7 +3,7 @@ title: "Build Week 7, 29th April 2019"
 date: 2019-05-05T10:49:19Z
 draft: false
 summary: "We start on the roof"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

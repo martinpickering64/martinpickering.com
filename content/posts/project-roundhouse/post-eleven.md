@@ -3,7 +3,7 @@ title: "Build Week 6, 1st April 2019"
 date: 2019-04-07T10:49:19Z
 draft: false
 summary: "Wall Plate assembly"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

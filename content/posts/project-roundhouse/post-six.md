@@ -3,7 +3,7 @@ title: "Build Week 2, 11th Feb 2019"
 date: 2019-02-17T10:49:19Z
 draft: false
 summary: "Stripping bark"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

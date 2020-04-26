@@ -3,7 +3,7 @@ title: "A new project"
 date: 2019-01-03T10:49:19Z
 draft: false
 summary: "Things are getting interesting"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Archaeology", "Bronze Age", "Roundhouse"]
 
 ---

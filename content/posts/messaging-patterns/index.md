@@ -5,7 +5,7 @@ summary: The hegemony of the Request-Response style must be challenged. Asynchro
   Messaging is our _David_. But to defeat _Goliath_ we must know how to apply messaging
   in an ordered and appropriate way. Messaging Patterns help us to achieve that.
 date: 2017-07-03T10:18:53.000+00:00
-categories: ["Software"]
+categories: Software
 tags: ["Design", "Messaging", "API", "Distributed Computing"]
 ---
 # Summary

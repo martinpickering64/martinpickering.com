@@ -3,7 +3,7 @@ title: "Semantic Versioning"
 date: 2018-02-22T10:49:19Z
 draft: false
 summary: "A widely adopted principle adopted within the Software Industry (amongst others) is known as Semantic Versioning.  Its manifesto can be found at https://semver.org/. I shall, unapologetically, reproduce an abridged version below as a reminder for myself."
-categories: ["Software"]
+categories: Software
 tags: []
 
 ---

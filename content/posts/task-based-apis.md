@@ -7,7 +7,7 @@ summary: This Post is concerned with a possble future direction of Application P
   of key design disciplines and design patterns; DDD, CQRS, Event Sourcing, Naked
   Objects, SOLID.
 date: 2018-03-06T15:08:15.000+00:00
-categories: ["Software"]
+categories: Software
 tags: ["Design", "API", "Distributed Computing", "Messaging"]
 
 ---

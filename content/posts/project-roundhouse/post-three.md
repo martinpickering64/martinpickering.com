@@ -3,7 +3,7 @@ title: "Planning Permission arrives!"
 date: 2019-01-17T10:49:19Z
 draft: false
 summary: "But it is conditional"
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

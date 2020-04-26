@@ -3,7 +3,7 @@ title: "Basic Branching and Merging"
 date: 2018-01-12T13:49:19Z
 summary: "Foundational concepts and commands."
 draft: false
-categories: ["Software"]
+categories: Software
 tags: ["Git"]
 
 ---

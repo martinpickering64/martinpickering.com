@@ -3,7 +3,7 @@ title: "Git Feature Branch Workflow"
 date: 2018-08-18T11:49:19Z
 draft: false
 summary: "Never break the master branch"
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

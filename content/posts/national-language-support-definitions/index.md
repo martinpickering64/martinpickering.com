@@ -3,7 +3,7 @@ title: "National Language Support Definitions"
 date: 2018-02-05T10:49:19Z
 draft: false
 summary: "An attempt at defining the terms Character Set, Encoding, Locale and National Language Support."
-categories: ["Software"]
+categories: Software
 tags: ["i8n"]
 
 ---

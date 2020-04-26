@@ -3,7 +3,7 @@ title: "Build Week 5, 25th March 2019"
 date: 2019-03-31T10:49:19Z
 draft: false
 summary: "Wall Posts, Wall Plate and Roof Beams."
-categories: ["Beeston Castle"]
+categories: "Beeston Castle"
 tags: ["Bronze Age", "Roundhouse"]
 
 ---

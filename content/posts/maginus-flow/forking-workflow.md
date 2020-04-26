@@ -3,7 +3,7 @@ title: "The Forking Workflow"
 date: 2018-08-18T13:49:19Z
 draft: false
 summary: "Daring to be different."
-categories: ["Software"]
+categories: Software
 tags: ["Git", "Maginus Flow"]
 
 ---

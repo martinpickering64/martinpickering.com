@@ -4,7 +4,7 @@ date: 2017-06-26T10:49:19Z
 draft: false
 summary: "Collected notes from various sources "
 
-categories: ["Software"]
+categories: Software
 tags: ["Design", "Distributed Computing"]
 ---
 
