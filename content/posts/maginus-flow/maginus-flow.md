@@ -461,3 +461,7 @@ a Topic branch being merged into the `develop` branch.
 ### The pu branch
 
 Ensuring that the `pu` branch is re-built as and when is necessary or desirable.
+
+## How did I draw the Git visualizations?
+
+I used the excellent JavaScript Library available from [GitGraph](https://gitgraphjs.com).
