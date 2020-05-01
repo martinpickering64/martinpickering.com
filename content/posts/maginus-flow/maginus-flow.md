@@ -40,6 +40,24 @@ Figure 5 develop and master after the next release
 Note that our `master` branch does not really exist until we have made our first release ;)
 
 To create a repository and to rename the default `master` branch to develop:
+
+{{<highlight bash>}}
+$ cd /<myRepoParentDir>
+$ git init <myProjectName>
+$ cd <myProjectName>
+$ echo "# my .gitignore file" > .gitignore
+$ git add .gitignore
+$ git commit –m "Get things going with a new .gitignore file"
+$ git branch –m master develop
+$ git remote add origin <someUrl>
+# if the remote already has a master branch then stop, 
+# think about what you are doing because it shouldn’t have one!
+# if having thought it is OK to remove the remote master then run
+#
+# git push origin :master
+#
+$ git push –u origin develop
+{{</highlight>}}
  
 ## Topic branches
 
@@ -57,8 +75,12 @@ from the central server once the feature was integrated with the `develop` branc
 
 ### Creating a topic branch
 
-To start a new topic branch, simply create a new branch from `develop` :
- 
+To start a new topic branch, simply create a new branch from `develop`:
+
+{{<highlight bash>}}
+$ git checkout -b topic/3179 develop
+$ git tag -a -m ‘start of #3179’ start_topic_3179
+{{</highlight>}} 
  
 Figure 6 creating a topic branch
 
@@ -79,6 +101,16 @@ confers the following advantages:
 The disadvantage is that this method is slightly more complex than using 
 either just a `git rebase` or just a `git merge --no—ff`, which are valid alternatives 
 (but not preferred as they each have disadvantages that are the polar opposite of the above advantages).
+
+{{<highlight bash>}}
+$ git checkout topic/3719
+$ git -i rebase develop
+$ git tag -a -m ‘end of #3179’ end_topic_3179
+$ git checkout develop
+$ git merge --no-ff topic/3719
+$ git push –-tags origin develop
+$ git branch -d topic/3719
+{{</highlight>}}
  
 Note that after the topic branch has been merged into `develop`, `develop` is immediately pushed 
 back to the remote `develop` branch (at origin) and then the local topic branch is removed.
@@ -87,12 +119,27 @@ Figure 7 finishing a topic branch
 
 If the topic branch had been published as well (via a prior `git push`) then the 
 upstream topic branch should also be removed.
+
+{{<highlight bash>}}
+$ git push origin :topic/3179
+{{</highlight>}}
  
-Alternate Topic Branch Integration #1
+*Alternate Topic Branch Integration #1*
 
 This method uses Git's rebase command (with the `-i`, meaning interactive, switch) to integrate 
 the topic branch with `develop`:
- 
+
+{{<highlight bash>}}
+$ git checkout topic/3719
+$ git rebase -i develop
+$ git tag -a -m ‘end of #3179’ end_topic_3179
+$ git checkout develop
+$ git merge –-ff-only topic/3719
+$ git push --tags origin develop
+$ git branch -d topic/3719
+# if the topic branch was public then...
+$ git push origin :topic/3179
+{{</highlight>}} 
  
 Figure 8 Alternate #1: finishing a topic branch
 
@@ -106,10 +153,21 @@ does not have multiple commits then this disadvantage does not apply and
 so this integration method could be used achieving all that we want 
 without any disadvantages.
 
-Alternate Topic Branch Integration #2
+*Alternate Topic Branch Integration #2*
 
 This method is as advocated by the Gitflow Workflow and `git merge` (with the `--no-ff` switch) 
 to integrate the topic branch with `develop` using a merge commit:
+ 
+{{<highlight bash>}}
+$ git checkout topic/3719
+$ git tag -a -m ‘end of #3179’ end_topic_3179
+$ git checkout develop
+$ git merge –-no-ff topic/3719
+$ git push --tags origin develop
+$ git branch -d topic/3719
+# if the topic branch was public then...
+$ git push origin :topic/3179
+{{</highlight>}}
  
  
 Figure 9 Alternative #2: finishing a topic branch
@@ -139,9 +197,9 @@ branch.
 The naming convention for the Release branches is `release/<Major-number>.<Minor-number>.0`, 
 for example, 7.4.0
 
-NOTE: Maginus Flow does not support the concept of Patch Releases or Monthly Update 
-Releases, as is current practice. The only Release type supported from current 
-parlance is a Full Release.
+> NOTE: Maginus Flow does not support the concept of Patch Releases or Monthly Update 
+  Releases, as is current practice in Maginus' current CMS cycles. The only 
+  Release type supported from current parlance is a Full Release.
 
 ### Starting a Release branch
 
@@ -152,12 +210,26 @@ be included in the Release.
 
 For example, here we start the branch for the version 7.4.0 Release on a commit 
 in `develop` that has the hash 3abe4c:
+
+{{<highlight bash>}}
+$ git checkout develop
+$ git checkout -b release/7.4.0 3abe4c
+{{</highlight>}}
  
 ### Finishing a Release branch
 
 Once the process for releasing is complete, the tip of the Release branch is 
 tagged with the Release's version number. After that, the Release branch needs 
 to be merged into `develop` to be permanently versioned:
+
+{{<highlight bash>}}
+$ git checkout release/7.4.0
+$ git tag -a 7.4.0
+$ git checkout develop
+$ git merge release/7.4.0
+$ git push --tags origin develop
+$ git branch -d release/7.4.0
+{{</highlight>}}
  
 Here's a diagram illustrating the above commands (assuming the release took 
 two commits):
@@ -169,6 +241,11 @@ Figure 10 finishing a Release branch
 Subsequent to a Release branch becoming complete the `master` branch needs to be 
 updated to respect the new public release point. This is achieved by _fast-forwarding_ 
 `master` to the latest release tag:
+
+{{<highlight bash>}}
+$ git checkout master
+$ git merge --ff-only 7.4.0
+{{</highlight>}}
  
 Here's a visualization of the state of the repository after updating `master` 
 subsequent to completing a release cycle:
@@ -177,11 +254,15 @@ Figure 11 updating master subsequent to a release
 
 Again, if the release branch had been pushed to the central repository 
 (made publically visible), delete it now:
+
+{{<highlight bash>}}
+$ git push origin :release/7.4.0
+{{</highlight>}}
  
 ## Hotfix branches
 
-NOTE: A Hotfix branch is not used to create what we currently call a Patch 
-Release. It actually produces a Full Release (in current terminology).
+> NOTE: A Hotfix branch is not used to create what we currently call a Patch 
+  Release. It actually produces a Full Release (in current terminology).
 
 Hotfix branches are very similar to Release branches, because they result in 
 a new version of the Product being released. It is by their intent that 
@@ -191,7 +272,7 @@ typically because of some critical defect found in the latest release that
 needs to be fixed as soon as possible.
 
 Hotfix branches are named `hotfix/<Major-number>.<Minor-number>.<Patch-number>`. Note 
-that as the Product has adopted Semantic Versioning, and whilst a Releases 
+that as the Product has adopted [Semantic Versioning](/posts/semantic-versioning), and whilst a Releases 
 affects either the Major or Minor number with the Patch number set to zero, 
 a Hotfixes affects only the Patch number. For example, Release 7.4.0 
 would have its first Hotfix as 7.4.1, and then 7.4.2 etc.
@@ -201,12 +282,29 @@ would have its first Hotfix as 7.4.1, and then 7.4.2 etc.
 Hotfix branches begin at the commit that the latest version tag points to. 
 As `master` always tracks the latest tag, creating a hotfix branch is quite 
 easy. Continuing our example from the release branch 7.4.0:
+
+{{<highlight bash>}}
+$ git checkout -b hotfix/7.4.1 7.4.0 master
+{{</highlight>}}
  
 ### Finishing a hotfix branch
 
 Finishing a hotfix branch is pretty much the same as finishing a release 
 branch: tag the tip, merge it to develop, then delete the branch and 
 finally update the `master` branch (moves its position).
+
+{{<highlight bash>}}
+$ git checkout hotfix/7.4.1
+$ git tag -a 7.4.1
+$ git checkout develop
+$ git merge hotfix/7.4.1
+$ git push --tags origin develop
+$ git branch -d hotfix/7.4.1
+$ git checkout master
+$ git merge --ff-only 7.4.1
+# if the hotfix branch was public then...
+$ git push origin :hotfix/7.4.1
+{{</highlight>}}
  
  
 Figure 12 finalising a Hotfix branch
@@ -268,9 +366,19 @@ perfection before it is merged to `develop`.
 Topics are generally integrated into `next` using a straight forwards `git merge` 
 command. As the history of `next` never contributes to that of `develop`, we can afford 
 `next`'s history to be somewhat less pure.
+
+{{<highlight bash>}}
+$ git checkout next
+$ git merge topic/3719
+{{</highlight>}}
  
 Between releases, the `next` branch should be regularly updated from the `develop` 
 branch preferably as and when Topic branches are merged into `develop`.
+
+{{<highlight bash>}}
+$ git checkout next
+$ git merge develop
+{{</highlight>}}
  
 The stability and longevity of the `next` branch means that it is possible, 
 even practicable, to base new development off of the `next` branch. 
@@ -304,6 +412,10 @@ branch that are inherent in its purpose.
 You can run the following command to see what topics are currently in 
 flight on the `pu` branch.  Sometimes, an idea that looked promising turns out 
 to be not so good and the topic can be dropped from `pu`.
+
+{{<highlight bash>}}
+$ git log --first-parent develop..pu
+{{</highlight>}}
  
 The `pu` branch and Topic branches that are only integrated with `pu` are 
 highly likely to be subject to `git rebase`. This also contributes to 
