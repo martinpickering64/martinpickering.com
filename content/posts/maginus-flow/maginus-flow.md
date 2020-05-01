@@ -29,13 +29,12 @@ be called `master`, but we have already used that name to satisfy another conven
 The tip of the `develop` branch represents our current view of what our next most 
 stable version of our Product could be (if we were asked to make a 
 release straight away).
- 
-Figure 3 develop and master branches after first release
- 
-Figure 4 develop moves onwards, master always points to the current release
 
+{{<figure src="../figure-3.jpg" caption="develop and master branches after first release">}}
  
-Figure 5 develop and master after the next release
+{{<figure src="../figure-4.jpg" caption="develop moves onwards, master always points to the current release">}}
+
+{{<figure src="../figure-5.jpg" caption="develop and master after the next release">}}
 
 Note that our `master` branch does not really exist until we have made our first release ;)
 
@@ -82,7 +81,7 @@ $ git checkout -b topic/3179 develop
 $ git tag -a -m ‘start of #3179’ start_topic_3179
 {{</highlight>}} 
  
-Figure 6 creating a topic branch
+{{<figure src="../figure-6.jpg" caption="creating a topic branch">}}
 
 ### Finishing a topic branch
 
@@ -115,7 +114,7 @@ $ git branch -d topic/3719
 Note that after the topic branch has been merged into `develop`, `develop` is immediately pushed 
 back to the remote `develop` branch (at origin) and then the local topic branch is removed.
  
-Figure 7 finishing a topic branch
+{{<figure src="../figure-7.jpg" caption="finishing a topic branch">}}
 
 If the topic branch had been published as well (via a prior `git push`) then the 
 upstream topic branch should also be removed.
@@ -124,7 +123,7 @@ upstream topic branch should also be removed.
 $ git push origin :topic/3179
 {{</highlight>}}
  
-*Alternate Topic Branch Integration #1*
+**Alternate Topic Branch Integration #1**
 
 This method uses Git's rebase command (with the `-i`, meaning interactive, switch) to integrate 
 the topic branch with `develop`:
@@ -141,7 +140,7 @@ $ git branch -d topic/3719
 $ git push origin :topic/3179
 {{</highlight>}} 
  
-Figure 8 Alternate #1: finishing a topic branch
+{{<figure src="../figure-8.jpg" caption="Alternate #1: finishing a topic branch">}}
 
 A key point to note is that the merge of the changes introduced by the topic branch 
 onto the `develop` branch are only ever accomplished using a fast-forward merge. This 
@@ -153,7 +152,7 @@ does not have multiple commits then this disadvantage does not apply and
 so this integration method could be used achieving all that we want 
 without any disadvantages.
 
-*Alternate Topic Branch Integration #2*
+**Alternate Topic Branch Integration #2**
 
 This method is as advocated by the Gitflow Workflow and `git merge` (with the `--no-ff` switch) 
 to integrate the topic branch with `develop` using a merge commit:
@@ -170,7 +169,7 @@ $ git push origin :topic/3179
 {{</highlight>}}
  
  
-Figure 9 Alternative #2: finishing a topic branch
+{{<figure src="../figure-9.jpg" caption="Alternative #2: finishing a topic branch">}}
 
 The main disadvantages of this integration method are:
 
@@ -234,7 +233,7 @@ $ git branch -d release/7.4.0
 Here's a diagram illustrating the above commands (assuming the release took 
 two commits):
  
-Figure 10 finishing a Release branch
+{{<figure src="../figure-10.jpg" caption="finishing a Release branch">}}
 
 ### Updating master after a Release
 
@@ -250,7 +249,7 @@ $ git merge --ff-only 7.4.0
 Here's a visualization of the state of the repository after updating `master` 
 subsequent to completing a release cycle:
  
-Figure 11 updating master subsequent to a release
+{{<figure src="../figure-11.jpg" caption="updating master subsequent to a release">}}
 
 Again, if the release branch had been pushed to the central repository 
 (made publically visible), delete it now:
@@ -307,7 +306,7 @@ $ git push origin :hotfix/7.4.1
 {{</highlight>}}
  
  
-Figure 12 finalising a Hotfix branch
+{{<figure src="../figure-12.jpg" caption="finalising a Hotfix branch">}}
 
 There is one  special case when finishing a Hotfix branch. If a Release 
 branch has been created in preparation for the next release before the 
