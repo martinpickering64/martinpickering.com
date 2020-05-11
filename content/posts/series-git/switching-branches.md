@@ -3,10 +3,13 @@ title: "Switching Branches"
 date: 2018-01-11T13:49:19Z
 summary: "Working on different stuff at the same time."
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 To switch to an existing branch, you run the `git checkout` command. 
  
 {{<highlight bash>}}

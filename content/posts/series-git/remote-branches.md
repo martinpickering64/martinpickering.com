@@ -3,10 +3,13 @@ title: "Remote Branches"
 date: 2018-01-15T09:49:19Z
 summary: "When you're not an island."
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 Remote references are references (pointers) in remote repositories, including branches, tags, 
 and so on. You can get a full list of remote references explicitly with `git ls-remote [remote]`, 
 or `git remote show [remote]` for remote branches as well as more information. Nevertheless, a more 

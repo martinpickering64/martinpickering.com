@@ -4,9 +4,12 @@ date: 2018-01-11T11:49:19Z
 summary: "How to diverge from the main line."
 draft: false
 categories: Software
-tags: ["Git"]
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 Nearly every VCS has some form of branching support. Branching means you diverge from the main line 
 of development and continue to do work without messing with that main line. In many VCS tools, this 
 is a realtively expensive process, often requiring the creation of a new copy of your source code 

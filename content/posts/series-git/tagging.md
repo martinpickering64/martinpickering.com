@@ -3,11 +3,13 @@ title: "Tagging"
 date: 2018-01-10T11:49:19Z
 summary: "Marking significant points in history."
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
- 
+ *This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 Like most VCSs, Git has the ability to tag specific points in history as being important. 
 Typically people use this functionality to mark release points (v1.0, and so on). 
 

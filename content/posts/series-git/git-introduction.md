@@ -3,10 +3,13 @@ title: "A quickie introduction to Git"
 date: 2018-01-04T10:49:19Z
 draft: false
 summary: "Git's terminology and the like"
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 Even though Git's user interface appears fairly similar to other VCSs, Git 
 stores and thinks about information in a very different way, and understanding 
 these differences will help you avoid becoming confused while using it.

@@ -3,8 +3,8 @@ title: "Git - A New Years Resolution"
 date: 2018-01-03T10:49:19Z
 draft: false
 summary: "I've never used Git before."
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
 __I have never used Git before.__

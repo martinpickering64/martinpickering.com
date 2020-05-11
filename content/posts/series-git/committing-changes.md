@@ -4,9 +4,11 @@ date: 2018-01-04T15:49:19Z
 summary: "Making history"
 draft: false
 categories: Software
-tags: ["Git"]
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
 
 Now that your staging area is set up the way you want it, you can commit your changes. 
 Remember that anything that is still unstaged (any files you have created or modified 

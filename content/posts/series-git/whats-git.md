@@ -3,11 +3,12 @@ title: "What is Git?"
 date: 2018-01-04T10:49:19Z
 draft: false
 summary: "And is it GIT, Git or git?"
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
-# What is Git?
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
 
 Quoting [git-scm.com](https://git-scm.com/)...
 

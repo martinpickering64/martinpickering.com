@@ -4,9 +4,12 @@ date: 2018-01-11T12:49:19Z
 summary: "Creaing a new divergence."
 draft: false
 categories: Software
-tags: ["Git"]
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 When a new branch is created a new pointer is created that you can move around. For example, 
 create a branch called testing branching from the tip of the master branch:
 

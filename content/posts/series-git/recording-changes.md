@@ -3,10 +3,12 @@ title: "Recording changes to the Repository"
 date: 2018-01-04T14:49:19Z
 summary: "Let's get some work done."
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
 
 Once you have a Git repository on your local machine, and a checkout or working copy of all 
 of its files in front of you. You'll want to start making changes and committing snapshots 

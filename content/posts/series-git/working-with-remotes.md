@@ -3,10 +3,13 @@ title: "Working with Remotes"
 date: 2018-01-10T10:49:19Z
 summary: "No man is an island."
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 To be able to collaborate on any Git project, you need to know how to manage your remote repositories. 
 Remote repositories are versions of your project that are hosted elsewhere (i.e. on the Internet or 
 network somewhere). There can be several of them, each of which generally is either read-only or 

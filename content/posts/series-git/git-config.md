@@ -3,10 +3,13 @@ title: "Git Config"
 date: 2018-01-04T11:49:19Z
 draft: false
 summary: "Configuring your Git installation"
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 `git config` lets you view and set configuration variables that control all aspects of 
 how Git looks and operates. These variables can be stored in three different places:
 

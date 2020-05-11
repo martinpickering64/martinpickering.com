@@ -3,10 +3,12 @@ title: "Viewing the commit history"
 date: 2018-01-06T16:49:19Z
 summary: "What has happened here then?"
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
 
 After you have created several commits, or if you have cloned a repository with an 
 existing commit history, you'll probably want to look back to see what has happened. 

@@ -3,10 +3,13 @@ title: "Rebasing"
 date: 2018-01-15T09:49:19Z
 summary: "It's a kind of magic."
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 In Git, there are two main ways to integrate changes from one branch into another: the merge and the rebase. 
 
 ## The Basic Rebase

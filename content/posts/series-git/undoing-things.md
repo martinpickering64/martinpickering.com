@@ -3,10 +3,12 @@ title: "Undoing things"
 date: 2018-01-07T10:49:19Z
 summary: "Oops, how do I get out of that?"
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
 
 At any stage, you may want to undo something. There are a few basic tools for 
 undoing changes that you've made. Be careful, because you can't always undo 

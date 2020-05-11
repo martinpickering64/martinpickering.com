@@ -3,10 +3,12 @@ title: "Getting a Git Repository"
 date: 2018-01-04T13:49:19Z
 summary: "Intialising and cloning..."
 draft: false
-categories: ["Software"]
-tags: ["Git"]
+categories: "Software"
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
 
 You typically obtain a Git repository in one of two ways:
 

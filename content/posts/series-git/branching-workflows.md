@@ -4,9 +4,11 @@ date: 2018-01-13T09:49:19Z
 summary: "What can/should you do with branches?"
 draft: false
 categories: Software
-tags: ["Git"]
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
  
 There are some common workflows that Git's lightweight branching makes possible.
 

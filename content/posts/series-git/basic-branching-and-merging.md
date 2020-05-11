@@ -4,9 +4,12 @@ date: 2018-01-12T13:49:19Z
 summary: "Foundational concepts and commands."
 draft: false
 categories: Software
-tags: ["Git"]
+tags: ["Git", "Git Basics"]
 
 ---
+*This Post is part of a series about Git, Git concepts, commands and usage patterns 
+to remind me and to help me learn. The first post of the series is [Git - A New Years Resolution](../introduction).*
+
 A simple example of branching and merging with a workflow that you might use in the real world can be illustrated as:
 
 1.	Do some work on a website.
