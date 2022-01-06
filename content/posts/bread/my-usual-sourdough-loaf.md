@@ -8,7 +8,7 @@ title = "My usual Sourdough Loaf"
 +++
 My most regularly made loaf is a pretty simple sourdough loaf. It is a three day process for me.
 
-## Day one
+## Day one (_evening_)
 
 Retrieve Vicky (_my sourdough starter_) from the fridge shortly after our evening meal. Add 50g wholemeal flour and 50ml cold water to Vicky and stir. Vicky is then left on the counter overnight to wake up and get active.
 
@@ -20,11 +20,11 @@ Take 100g of activated sourdough starter from Vicky and put into a large mason b
 * 450g bread flour
 * 8g salt
 
-Put Vicky back into the fridge ready for next time. 
+Put Vicky back into the fridge ready for next time.
 
 Combine the ingredients together to make a shaggy dough with no dry bits or lumps.
 
-Leave covered with a tea towel for 30 minutes or so and then do a first stretch and fold. Leave for another 30 minutes and stretch and fold again. Leave for 2 hours and do a final stretch and fold. Leave for another 2 hours (_or more depending on temperature and circumstances_). 
+Leave covered with a tea towel for 30 minutes or so and then do a first stretch and fold. Leave for another 30 minutes and stretch and fold again. Leave for 2 hours and do a final stretch and fold. Leave for another 2 hours (_or more depending on temperature and circumstances_).
 
 Now do the pre-shape and leave uncovered on the counter for 20 or so minutes.
 
@@ -43,7 +43,7 @@ Once the stone is at temperature...
 
 Bake with the oven fan off for 20 minutes. Then release the steam, switch on the oven fan, adjust the temperature to somewhere around 180C to 200C and bake for another 20 minutes.
 
-Remove the baked loaf and place on a wire tray to cool. 
+Remove the baked loaf and place on a wire tray to cool.
 
 Use the residual heat of the oven to dry out the banneton so as to prevent mould.
 
