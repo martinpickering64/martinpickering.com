@@ -14,3 +14,5 @@ fields:
 - type: image_gallery
   name: images
   label: images
+pages:
+- content/posts/this-website/what-makes-up-this-website.md
