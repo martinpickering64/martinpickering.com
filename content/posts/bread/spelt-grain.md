@@ -1,7 +1,6 @@
 +++
 categories = "Food"
 date = 2022-01-06T14:42:59Z
-draft = true
 summary = "A little about Spelt Flour..."
 tags = ["Bread"]
 title = "Spelt Grain"
