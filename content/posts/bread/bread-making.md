@@ -18,6 +18,8 @@ Sourdough is not the only bread I have a go at. But it is my staple. From time t
 
 * Various forms of flat breads that are usually cooked on the stove and I always burn my hands
 * Italian breads especially Focaccia
-* Turkish breads usually Pide or Ekmek
+* Turkish breads usually Pide and Ekmek
 
 I use Eric Treuille's and Ursula Ferringo's book ["BREAD"](https://amazon.co.uk/Bread-Eric-Treuille/dp/075130607X) as my main source of information and inspiration for bready experiments. I have [tagged my bread-like posts](/tags/bread) if you want to find them.
+
+If Sourdough pricks your curiosity but you don't know how or where to start then may I recommend checking out Jack Sturgess' [Bake with Jack website](https://www.bakewithjack.co.uk/) and [YouTube Channel](https://www.youtube.com/channel/UCTVR5DSxWPpAVI8TzaaXRqQ). I'm sure he does many other forms of social media as well.
