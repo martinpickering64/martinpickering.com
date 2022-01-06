@@ -2,7 +2,7 @@
 categories = "Food"
 date = 2022-01-06T13:50:02Z
 summary = "A short recipe..."
-tags = ["bread"]
+tags = ["Bread"]
 title = "My usual Sourdough Loaf"
 
 +++
