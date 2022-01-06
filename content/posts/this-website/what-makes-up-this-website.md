@@ -1,7 +1,10 @@
 +++
+categories = "Software"
 date = 2022-01-04T00:00:00Z
 description = "What stuff is involved in creating and maintaining this website?"
 images = []
+summary = "What is this website made up of?"
+tags = ["Website"]
 title = "What makes up this website"
 
 +++
