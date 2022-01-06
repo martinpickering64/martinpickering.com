@@ -16,7 +16,7 @@ Retrieve Vicky (_my sourdough starter_) from the fridge shortly after our evenin
 
 Take 100g of activated sourdough starter from Vicky and put into a large mason bowl. Then add...
 
-* 310ml cold water (_stir it up a bit_)
+* 310ml water (_stir it up a bit_)
 * 450g bread flour
 * 8g salt
 
