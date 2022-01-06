@@ -9,3 +9,5 @@ I'm Martin Pickering, partner to [Caroline Gregson](https://www.carolinegregson.
 
 I earn my keep as a Code Monkey; most recently for [Maginus Software Solutions Ltd](https://www.maginus.com/ "Maginus' website") and [Naveo Commerce](https://naveocommerce.com/). I'm also sometimes known as a [Beekeeper](https://www.devabees.com/ "it's all about the bees"), a Woodland Manager and a
 [builder of ancient roundhouses](https://www.english-heritage.org.uk/visit/places/beeston-castle-and-woodland-park/beeston-roundhouse/ "one I made earlier").
+
+For more about how this website is made why not take a look at [this Post](/posts/this-website/what-makes-up-this-website/).
