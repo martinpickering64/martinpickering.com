@@ -37,6 +37,7 @@ fields:
     max: 5
 pages:
 - content/posts/bread/bread-making.md
+- content/posts/bread/flour.md
 - content/posts/bread/granary-loaf.md
 - content/posts/bread/my-usual-sourdough-loaf.md
 - content/posts/bread/spelt-bread.md
