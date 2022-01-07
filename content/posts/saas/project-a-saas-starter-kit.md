@@ -6,7 +6,7 @@ tags = ["Cloud", "Azure", "SAAS"]
 title = "Project: A SAAS Starter Kit"
 
 +++
-I have had the pleasure to create a small number of _limited_ SaaS Projects/Products in the past. They have been fine, even great, but the process of doing so has left me somewhat unsatisfied. I was left thinking there was:
+I have had the pleasure to create a small number of _limited_ SAAS Projects/Products in the past. They have been fine, even great, but the process of doing so has left me somewhat unsatisfied. I was left thinking there was:
 
 * too many manual day-to-day procedures to keep the lights on
 * provisioning new tenants was not as quick as it could be
@@ -31,15 +31,15 @@ Use of .Net6 and Azure is assumed.
 
 The kit provides the resources and services to be able to create and launch an end-to-end SaaS Product including microservices, data stores, tenant and identity management needed to underpin the Product and manage the deployed platform.
 
-A sample SaaS Product illustrates the various extension points incorporated in the reference architecture that Product Teams use to embed their own SaaS Product to make it all come alive and service their needs.
+A sample SAAS Product illustrates the various extension points incorporated in the reference architecture that Product Teams use to embed their own SAAS Product to make it all come alive and service their needs.
 
 ## Breakdown
 
 The things I expect it to deliver include:
 
-* A SaaS Management Portal
+* A SAAS Management Portal
 * A Developer Portal
-* A SaaS Provider App for on-boarding new Tenants
+* A SAAS Provider App for on-boarding new Tenants
 * Several microservices
   1. Onboarding
   2. Tenant Catalog
@@ -81,4 +81,4 @@ So, that's the idea.
 
 To get started with this it looks like I have a lot of research to do in the first instance. That obviously will involve multiple spikes and experiments, discarded ideas and more than a tad of frustration.
 
-First it needs a name...
+First, it needs a name...
