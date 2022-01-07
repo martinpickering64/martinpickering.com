@@ -29,7 +29,7 @@ My idea was to create a SAAS Starter Kit. Created out of .Net6, targeting Azure 
 
 Use of .Net6 and Azure is assumed.
 
-The kit provides the resources and services to be able to create and launch an end-to-end SaaS Product including microservices, data stores, tenant and identity management needed to underpin the Product and manage the deployed platform.
+The kit provides the resources and services to be able to create and launch an end-to-end SAAS Product including microservices, data stores, tenant and identity management needed to underpin the Product and manage the deployed platform.
 
 A sample SAAS Product illustrates the various extension points incorporated in the reference architecture that Product Teams use to embed their own SAAS Product to make it all come alive and service their needs.
 
