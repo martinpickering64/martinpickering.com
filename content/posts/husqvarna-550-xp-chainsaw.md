@@ -6,7 +6,7 @@ tags = ["Forestry"]
 title = "Husqvarna 550 XP Chainsaw"
 
 +++
-![](/uploads/husqvarna550xp.jpg)
+![Chainsaw](/uploads/images/husqvarna550xp.jpg "Husqvarna 550 xp")
 
 50cc/3kw chainsaw with 15" chain bar. The chain is a H25 0.325" pitch. The saw is able to drive chain bars between 13" and 20".
 
