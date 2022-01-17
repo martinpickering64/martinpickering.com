@@ -9,6 +9,8 @@ enableRobotsTXT=true
 #pygmentsUseClasses=true
 pygmentsCodeFences=true
 
+paginate=20
+
 [params.intro]
   main = "Hi, I'm Martin"
   sub = "I'm a Code Monkey, Beekeeper and Forester"
