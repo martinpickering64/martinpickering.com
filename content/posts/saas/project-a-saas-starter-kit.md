@@ -2,7 +2,7 @@
 categories = "Software"
 date = 2021-12-05T14:09:18Z
 summary = "My current side project"
-tags = ["Cloud", "Azure", "SAAS"]
+tags = ["herald", "Cloud", "Azure", "SAAS"]
 title = "Project: A SAAS Starter Kit"
 
 +++
