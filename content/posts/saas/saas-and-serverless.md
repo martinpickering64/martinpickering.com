@@ -2,7 +2,7 @@
 categories = "Software"
 date = 2022-01-08T14:40:42Z
 summary = "Is serverless a good fit for SAAS?"
-tags = ["Cloud", "SAAS"]
+tags = ["herald", "Cloud", "SAAS"]
 title = "SAAS and Serverless"
 
 +++
