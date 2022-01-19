@@ -2,7 +2,7 @@
 categories = "Software"
 date = 2022-01-08T14:31:08Z
 summary = "What's in a name?"
-tags = ["SAAS"]
+tags = ["herald", "SAAS"]
 title = "Herald"
 
 +++
