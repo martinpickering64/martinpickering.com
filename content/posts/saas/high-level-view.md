@@ -17,9 +17,9 @@ There are two domains:
 1. The _product_ Domain: where the software and services of the SAAS Product exist
 2. The _herald_ Domain: where the software and services of herald exist
 
-Users of the SAAS Product (_tenant users_) interact with the Product’s Applications and services via the _product_ Domain. Beforehand they must authenticate themselves via the identity features located in the _herald_ Domain. If the SASS Product offers and API and an associated Developer experience, then the _product_ Domain also offers a Developer Portal.
+Users of the SAAS Product (_tenant users_) interact with the Product’s Applications and services via the _product_ Domain. Beforehand they must authenticate themselves via the identity features located in the _herald_ Domain. If the SASS Product offers an API and an associated Developer experience, then the _product_ Domain also has a Developer Portal.
 
-Visitors wishing to sign-up to be able to make use of the SAAS Product will do so using herald’s sign-up application. This would create a new tenancy within the SAAS Product. Alternatively, a herald Administrator can use the admin console to create a new tenant on-behalf of the user. 
+Visitors wishing to sign-up to be able to make use of the SAAS Product will do so using herald’s sign-up application. This would create a new tenancy within the SAAS Product. Alternatively, a herald Administrator can use the admin console to create a new tenant on-behalf of the user.
 
 Suitably authorised tenant users are also able to interact with herald’s tenant admin app to manage their tenancy, review their bills etc.
 
