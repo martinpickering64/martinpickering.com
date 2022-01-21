@@ -1,0 +1,20 @@
+name: Manual workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: jakejarvis/hugo-build-action@v0.92.0
+#      with:
+#        args: --minify --buildDrafts
+    - uses: actions/upload-artifact@v2
+      with:
+        name: website
+        path: './public'
+    - uses: anishathalye/proof-html@v1
+      with:
+        directory: './public'        
