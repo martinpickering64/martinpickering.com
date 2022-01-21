@@ -39,13 +39,13 @@
     {{ end }}
 
     {{ $styles := resources.Get "scss/journal.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
-    <script src="{{.Site.BaseURL}}/js/loadCSS.js"></script>
-    <script src="{{.Site.BaseURL}}/js/table.js"></script>
+    <script src="{{.Site.BaseURL}}js/loadCSS.js"></script>
+    <script src="{{.Site.BaseURL}}js/table.js"></script>
 
     {{ if and (not (.Params.disableToC) ) (.IsPage) }}
-    <script src="{{.Site.BaseURL}}/js/toc.js"></script>
+    <script src="{{.Site.BaseURL}}js/toc.js"></script>
     {{ else }}
     <style>
         .toc {

@@ -56,4 +56,4 @@ Gardeners' World Live.
 
 You can also see the drains have begun to do their thing as there is no longer any standing water around the building.
 
-[Historic Concepts Blog](https://historicconcepts.co.uk/2019/06/11/beeston-bronze-age-structure-construction-week-9/)
+[Historic Concepts Blog](https://historicconcepts.co.uk/2019/07/07/beeston-bronze-age-structure-construction-week-9/)

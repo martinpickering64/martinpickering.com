@@ -464,4 +464,4 @@ Ensuring that the `pu` branch is re-built as and when is necessary or desirable.
 
 ## How did I draw the Git visualizations?
 
-I used the excellent JavaScript Library available from [GitGraph](https://gitgraphjs.com).
+I used the excellent JavaScript Library available from [GitGraph](https://github.com/nicoespeon/gitgraph.js/).

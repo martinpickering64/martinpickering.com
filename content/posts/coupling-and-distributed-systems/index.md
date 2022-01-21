@@ -206,7 +206,7 @@ If Server 2 were to fail, could Service A [on Server 1] automatically continue b
 
 ## Potential solutions for Spatial Coupling 
 
-Any given code ought not to need to know where its co-operating Services are on the network. This can be achieved by delegating communications to a lower software level; an example of which is the [Service Agent Pattern](http://soapatterns.org/design_patterns/service_agent).  
+Any given code ought not to need to know where its co-operating Services are on the network. This can be achieved by delegating communications to a lower software level; an example of which is the [Service Agent Pattern](https://patterns.arcitura.com/soa-patterns/design_patterns/service_agent).  
 
 Even using Service Agents still leaves the question as to how the agents know where to send messages to. Load Balancing is an often utilised technique that means that a Requester talking via a Load Balancer does not actually know where their Request has been routed and therefore which server is handling their Request. 
 

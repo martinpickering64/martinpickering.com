@@ -29,4 +29,4 @@ Explanations as to how the Git Feature Branch Workflow actually works can be fou
 on The Internet, for example, on 
 [Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) 
 or via its original source 
-[Vincent Driessen's Blog Post: A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/).
+[Vincent Driessen's Blog Post: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/).
