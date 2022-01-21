@@ -8,7 +8,7 @@ tags: ["Git", "Maginus Flow"]
 
 ---
 Gitflow Workflow is a Git Workflow design that was first published and made popular by 
-[Vincent Driessen at nvie](http://nvie.com/posts/a-successful-git-branching-model/) 
+[Vincent Driessen at nvie](https://nvie.com/posts/a-successful-git-branching-model/) 
 and is now probably the most popular  Git Workflow. Gitflow 
 defines a strict branching model, designed around the Project Release. As such, it 
 provides a robust framework for managing larger projects.  

@@ -79,7 +79,7 @@ the wattle walls. We found the most effective application technique was to work 
 of the wattle and to simultaneously apply daub to the inside and outside surfaces.
 
 {{<figure src="../canon-balls.jpg" caption="A completed daub mix ready for application to the wall.">}}
-{{<figure src="../duabing-experiment.jpg" caption="An experimental patch of daub testing out a daub recipe.">}}
+{{<figure src="../daubing-experiment.jpg" caption="An experimental patch of daub testing out a daub recipe.">}}
 {{<figure src="../dauber-in-action.jpg" caption="Once the recipe was decided upon and the application technique, we we off doing whole wall panels.">}}
 {{<figure src="../completed-daubed-panel.jpg" caption="A completed Wall Panel.">}}
 
