@@ -11,8 +11,8 @@ jobs:
       with:
         submodules: 'recursive'
     - uses: jakejarvis/hugo-build-action@v0.92.0
-      with:
-        args: --minify
+#      with:
+#        args: --minify
     - uses: actions/upload-artifact@v2
       with:
         name: website
