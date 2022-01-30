@@ -6,7 +6,7 @@ tags = ["Security"]
 title = "Authorisation in ASP.Net Core"
 
 +++
-Security \[_in software_\] is the collective term for five principles: Identity, Authentication, Authorisation, Integrity, Privacy and Non-Repudiation. This Post is about how Authorisation can be added to an ASP.Net Core Web Application.
+Security \[_in software_\] is the collective term for six principles: Identity, Authentication, Authorisation, Integrity, Privacy and Non-Repudiation. This Post is about how Authorisation can be added to an ASP.Net Core Web Application.
 
 Authorisation determines what a user can do. The identity of a User can be authenticated or anonymous. Authenticated meaning that the offered Identity has successfully traversed some Authentication mechanism, whilst anonymous meaning that Authentication has not occurred.
 
