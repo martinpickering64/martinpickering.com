@@ -1,0 +1,7 @@
+{{/* Available alert types: primary, secondary, success, danger, warning, info, light, dark */}}
+{{- $alertType := .Get 0 -}}
+{{/* Workaround markdownify inconsistency for single/multiple paragraphs */}}
+{{- $raw := (markdownify .Inner | chomp) -}}
+<div class="alert alert-{{ $alertType }}" role="{{ $alertType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
+{{ $raw }}
+</div>

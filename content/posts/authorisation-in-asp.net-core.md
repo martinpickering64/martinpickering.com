@@ -46,7 +46,9 @@ public class LogoutModel : PageModel
 }
 ```
 
+{{< alert warning >}}
 The `AuthorizeAttribute` is not supported with Razor Page handlers.
+{{< /alert >}}
 
 It can sometimes be desirable to cause the default behaviour of a Web Application to require that Users be authenticated. This can reduce the amount of clutter due to `AuthorizeAttribute` needing to be added to every Controller etc. It can also safeguard against an accidental omission of the `AuthorizeAttribute`.
 
