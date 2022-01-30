@@ -133,3 +133,81 @@ Role-based and Claims-based authorisation have been built out of these foundatio
 ### Authorisation Requirements
 
 A Requirement is a class that implements the [IAuthorizeRequirement](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationrequirement?view=aspnetcore-6.0) marker interface. The class is a collection of data points that are used to evaluate the Requester (current user principal) by a policy. A parameterized country of residence requirement could be implemented as follows:
+
+```cs
+public class CountryOfResidenceRequirement : IAuthorizationRequirement
+{
+    public CountryOfResidenceRequirement(string isoCountryCode) =>
+        IsoCountryCode = isoCountryCode;
+
+    public string IsoCountryCode { get; }
+}
+```
+
+Note: it is not mandatory for a Requirement to have data or properties.
+
+### Authorisation Handlers
+
+A Handler is responsible for the evaluation of an Authorisation Requirement and its properties. An [AuthorizationHandlerContext](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.authorizationhandlercontext?view=aspnetcore-6.0) is available to the Handler to aid evaluation. A Requirement may have multiple Handlers and a Handler may handle one or several types of Requirements.
+
+To create a Handler capable of handling a single type of Requirement implement a Class that inherits from [AuthorzationHandler<TRequirement>](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.authorizationhandler-1?view=aspnetcore-6.0). For example:
+
+```cs
+public class CountryOfResidenceHandler : AuthorizationHandler<CountryOfResidenceRequirement>
+{
+    protected override Task HandleRequirementAsync(
+        AuthorizationHandlerContext context, 
+        CountryOfResidenceRequirement requirement)
+    {
+        var countryClaim = context.User.FindFirst(
+            c => c.Type == ClaimTypes.Country 
+                 && c.Issuer == "http://example.com");
+       if (countryClaim?.Value == requirement.IsoCountryCode)
+       {
+          context.Succeed(requirement);
+       }
+       return context.Task.CompletedTask;
+    }
+}
+```
+
+Should it be desirable to implement a Handler that is responsible for several different types of Requirements then implement the [`IAuthorizationHandler`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationhandler?view=aspnetcore-6.0) Interface. The Handler must implement the `Task HandleAsync(AuthorizationContext)` Interface Method. The `AuthorizationContext` object has a property called `PendingRequirments` that lists Requirements that have yet to be marked as successful. The Handler may examine the list and pull out those Requirements that it can evaluate. For each requirement that the Handler evaluates to be satisfied then it calls `context.Succeed(requirement)`. Finally, the Handler returns `Task.CompletedTask`
+
+A Handler indicated a Requirement is satisfied by calling `context.Succeed(requirement)`, passing the instance of the requirement that was satisfied. A Handler indicates completion by returning `Task.Completed`. Generally, Handlers avoid explicitly handling failure as other Handlers may succeed. However, when authorisation failure needs to be guaranteed regardless of the success of other Handler then a call of `context.Fail()` offers such a guarantee.
+
+Having implemented the Authorisation Requirements and the Authorisation Handlers a couple more things need to happen before they come to life. First, an Authorisation Handler must be registered in the Web Applications collection of Services, e.g.
+
+```cs
+builder.Services.AddSingleton<IAuthorizationHandler, CountryOfResidenceHandler>();
+```
+
+Second, policies need to be registered that make use of Requirements, e.g.
+
+```cs
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("residentInUK", policy =>
+        policy.Requirements.Add(new IsoCountryRequirement("GBR")));
+});
+```
+
+When it is possible to clearly express in simple code how a Policy can be evaluated then it is possible to use a `func` to fulfill the Policy. For example,
+
+```cs
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("hasUkEmail", policy =>
+        policy.RequireAssertion(context => context.User.HasClaim(c =>
+            c.Type == ClaimTypes.Email && (c.Value.EndsWith(".gb") || c.Value.EndsWith(".uk")))));
+});
+```
+
+## Specialised Policy-based Authorisation
+
+The above has shown the common or preferred ways by which Policy-based authorisation is achieved; namely, `AuthorizationOptions.AddPolicy` calls during authorisation service configuration. Circumstances may dictate that registration of policies this way is somehow inappropriate. A custom [`IAuthorizationPolicyProvider`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationpolicyprovider?view=aspnetcore-6.0) offers an alternative way to control how authorisation policies are supplied.
+
+Having implemented a Class that inherits from `IAuthorizationPolicyProvider` it needs to be registered with the Web Application’s Dependency Injection sub-system to replace the default policy provider:
+
+```cs
+services.AddSingleton<IAuthorizationPolicyProvider, MyPolicyProvider>();
+```
