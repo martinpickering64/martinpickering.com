@@ -46,7 +46,7 @@ public class LogoutModel : PageModel
 }
 ```
 
-<p class="alert alert-warning" role="alert">The `AuthorizeAttribute` is not supported with Razor Page handlers.</p>
+The `AuthorizeAttribute` is not supported with Razor Page handlers.
 
 It can sometimes be desirable to cause the default behaviour of a Web Application to require that Users be authenticated. This can reduce the amount of clutter due to `AuthorizeAttribute` needing to be added to every Controller etc. It can also safeguard against an accidental omission of the `AuthorizeAttribute`.
 
