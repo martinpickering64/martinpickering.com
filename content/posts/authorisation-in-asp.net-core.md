@@ -85,7 +85,11 @@ public class AccountController: Controller
 
 Note: The above example restricts use of the `AccountController` to Users who are members of either the `HRManager` or `CLevel` Roles, and they must also be a member of the `PowerUser` Role.
 
+{{< alert info >}}
+
 When configuring the Web Application don’t forget to append the [IdentityBuilder.AddRoles](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.identity.identitybuilder.addroles?view=aspnetcore-6.0) method whilst adding Identity to the Web Applications Services.
+
+{{< /alert >}}
 
 ## Claims-based Authorisation
 
@@ -145,7 +149,11 @@ public class CountryOfResidenceRequirement : IAuthorizationRequirement
 }
 ```
 
+{{< alert info >}}
+
 Note: it is not mandatory for a Requirement to have data or properties.
+
+{{< /alert >}}
 
 ### Authorisation Handlers
 
