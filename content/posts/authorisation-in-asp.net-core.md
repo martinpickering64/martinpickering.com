@@ -22,7 +22,6 @@ Simple authorisation is almost always about differentiating requests originating
 The [`AuthorizeAttribute`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.authorizeattribute?view=aspnetcore-6.0) is used to decorate a Controller Class, a Controller Action or a Razor Page. The `AuthorizeAttribute` has an opposite in the [`AllowAnonymousAttribute`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.authorization.allowanonymousattribute?view=aspnetcore-6.0)
 
 The following example uses `AuthorizeAttribute` is its default form to require that all Action Methods of the Account Controller be limited to authenticated users only. The addition of `AllowAnonymousAttribute` to the Login Action Method overrides the `AuthorizeAttribute` so permitting anonymous users to access the Login feature.
-
 {{<highlight csharp>}}
 [Authorize]
 public class AccountController : Controller
@@ -33,3 +32,16 @@ public class AccountController : Controller
     public ActionResult Logout() {}   
 }
 {{</highlight>}}
+Using AuthorizeAtttribute with a Razor Page is demonstrated below:
+{{<highlight csharp>}}
+[Authorize]
+public class LogoutModel : PageModel
+{
+    public async Task OnGetAsync() {}
+
+    public async Task<IActionResult> OnPostAsync() {}
+}
+{{</highlight>}}
+The `AuthorizeAttribute` is not supported with Razor Page handlers.
+  
+It can sometimes be desirable to cause the default behaviour of a Web Application to require that Users be authenticated. This can reduce the amount of clutter due to `AuthorizeAttribute` needing to be added to every Controller etc. It can also safeguard against an accidental omission of the `AuthorizeAttribute`. 
