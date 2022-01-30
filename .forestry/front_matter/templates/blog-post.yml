@@ -36,6 +36,7 @@ fields:
     min: 1
     max: 5
 pages:
+- content/posts/authorisation-in-asp.net-core.md
 - content/posts/bread/bread-making.md
 - content/posts/bread/flour.md
 - content/posts/bread/granary-loaf.md
