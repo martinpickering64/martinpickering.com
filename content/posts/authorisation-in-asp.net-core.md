@@ -23,25 +23,45 @@ The [`AuthorizeAttribute`](https://docs.microsoft.com/en-us/dotnet/api/microsoft
 
 The following example uses `AuthorizeAttribute` is its default form to require that all Action Methods of the Account Controller be limited to authenticated users only. The addition of `AllowAnonymousAttribute` to the Login Action Method overrides the `AuthorizeAttribute` so permitting anonymous users to access the Login feature.
 {{<highlight csharp>}}
-[Authorize]
+\[Authorize\]
 public class AccountController : Controller
 {
-    [AllowAnonymous]
-    public ActionResult Login() {}  
-        
+\[AllowAnonymous\]
+public ActionResult Login() {}
+
     public ActionResult Logout() {}   
+
 }
 {{</highlight>}}
 Using AuthorizeAtttribute with a Razor Page is demonstrated below:
 {{<highlight csharp>}}
-[Authorize]
+\[Authorize\]
 public class LogoutModel : PageModel
 {
-    public async Task OnGetAsync() {}
+public async Task OnGetAsync() {}
 
     public async Task<IActionResult> OnPostAsync() {}
+
 }
 {{</highlight>}}
 The `AuthorizeAttribute` is not supported with Razor Page handlers.
-  
-It can sometimes be desirable to cause the default behaviour of a Web Application to require that Users be authenticated. This can reduce the amount of clutter due to `AuthorizeAttribute` needing to be added to every Controller etc. It can also safeguard against an accidental omission of the `AuthorizeAttribute`. 
+
+It can sometimes be desirable to cause the default behaviour of a Web Application to require that Users be authenticated. This can reduce the amount of clutter due to `AuthorizeAttribute` needing to be added to every Controller etc. It can also safeguard against an accidental omission of the `AuthorizeAttribute`.
+
+{{<highlight csharp "linenos=true,hl_lines=3-6">}}
+
+var builder = WebApplication.CreateBuilder(args);
+
+// various Web Application start up and initialisation code here…
+
+builder.Services.AddAuthorization(options =>
+
+{
+
+    options.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+
+});
+
+{{</highlight>}}
+
+Once the default behaviour of requiring authentication is established (_see highlighted code above_) then `[AllowAnonymous]` can be used to override the default behaviour wherever it is needed.
