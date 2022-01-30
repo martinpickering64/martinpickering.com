@@ -26,10 +26,10 @@ The following example uses `AuthorizeAttribute` is its default form to require t
 [Authorize]
 public class AccountController : Controller
 {
-[AllowAnonymous]
-public ActionResult Login() {}
+   [AllowAnonymous]
+   public ActionResult Login() {}
 
-    public ActionResult Logout() {}   
+   public ActionResult Logout() {}   
 
 }
 ```
@@ -38,10 +38,9 @@ Using AuthorizeAtttribute with a Razor Page is demonstrated below:
 [Authorize]
 public class LogoutModel : PageModel
 {
-public async Task OnGetAsync() {}
+   public async Task OnGetAsync() {}
 
-    public async Task<IActionResult> OnPostAsync() {}
-
+   public async Task<IActionResult> OnPostAsync() {}
 }
 ```
 The `AuthorizeAttribute` is not supported with Razor Page handlers.
