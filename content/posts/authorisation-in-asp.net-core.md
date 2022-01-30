@@ -24,27 +24,12 @@ The [`AuthorizeAttribute`](https://docs.microsoft.com/en-us/dotnet/api/microsoft
 The following example uses `AuthorizeAttribute` is its default form to require that all Action Methods of the Account Controller be limited to authenticated users only. The addition of `AllowAnonymousAttribute` to the Login Action Method overrides the `AuthorizeAttribute` so permitting anonymous users to access the Login feature.
 
 {{<highlight csharp>}}
-
 [Authorize]
-
 public class AccountController : Controller
-
 {
-
     [AllowAnonymous]
-    
-    public ActionResult Login()
-    
-    {
-    
-    }
-    
-    public ActionResult Logout()
-    
-    {
-    
-    }
-
+    public ActionResult Login() {}  
+        
+    public ActionResult Logout() {}   
 }
-
 {{</highlight>}}
