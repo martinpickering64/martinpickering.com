@@ -70,24 +70,14 @@ In older times it was common to see authorisation by role being used and it was 
 
 Our friend the `AuthorizeAttribute` is required again. This time we specify the Role restrictions by using the Roles property of the `AuthorizeAttribute`. Should Role-based authorisation fit your need than the following sample code illustrates what is involved:
 
-\`\`\`cs
-
-\[Authorize(Roles = "HRManager, CLevel")\]
-
-\[Authorize(Roles = "PowerUser")\]
-
+```cs
+[Authorize(Roles = "HRManager, CLevel")]
+[Authorize(Roles = "PowerUser")]
 public class AccountController: Controller
-
 {
-
    public IActionResult ViewUsers()
-
    {
-
       return View();
-
    }
-
 }
-
-\`\`\`
+```
