@@ -51,7 +51,7 @@ The `AuthorizeAttribute` is not supported with Razor Page handlers.
 
 It can sometimes be desirable to cause the default behaviour of a Web Application to require that Users be authenticated. This can reduce the amount of clutter due to `AuthorizeAttribute` needing to be added to every Controller etc. It can also safeguard against an accidental omission of the `AuthorizeAttribute`.
 
-```cs {linenos=true,hl_lines=["3-8"]}
+```cs {linenos=true}
 var builder = WebApplication.CreateBuilder(args);
 // various Web Application start up and initialisation code here…
 builder.Services.AddAuthorization(options =>
@@ -62,7 +62,7 @@ builder.Services.AddAuthorization(options =>
 });
 ```
 
-Once the default behaviour of requiring authentication is established (_see highlighted code above_) then `[AllowAnonymous]` can be used to override the default behaviour wherever it is needed.
+Once the default behaviour of requiring authentication is established (_see lines 3-8 in the code above_) then `[AllowAnonymous]` can be used to override the default behaviour wherever it is needed.
 
 ## Role-based Authorisation
 
