@@ -1,7 +1,6 @@
 +++
 categories = "Software"
 date = 2022-01-19T17:13:57Z
-draft = true
 summary = "An aerial view of herald"
 tags = ["SAAS", "herald"]
 title = "High-level View"
