@@ -34,7 +34,8 @@ build:
   - HUGO_BUILD_DIR=~/hugo/public
   preview_output_directory: public
   preview_docker_image: cibuilds/hugo:0.108
-  mount_path: "~/hugo"
-  working_dir: "~/hugo"
-  instant_preview_command: 'hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk '
+  mount_path: "/hugo"
+  working_dir: "/hugo"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
 version: 0.58.2
