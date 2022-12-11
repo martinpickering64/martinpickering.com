@@ -1,61 +1,32 @@
-{{ define "main" }}
-{{ $desc := "" }}
-<div ref="streamContainer" class="stream-container">
-    <div class="post-list-container post-list-container-no-background">
-        {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
-        {{ range $paginator.Pages }}
-        {{ if eq .Type "posts" }}
-        {{ $desc = "" }}
-        {{ if .Params.summary }}
-        {{ $desc = .Params.summary }}
-        {{ else if .Params.abstract }}
-        {{ $desc = .Params.abstract }}
-        {{ else if .IsPage }}
-        {{ $desc = .Summary }}
-        {{ else if site.Params.description }}
-        {{ $desc = site.Params.description }}
-        {{ else }}
-        {{ $desc = .Description }}
-        {{ end }}
-        {{if and (.IsPage) (.Params.date)}}
-        <a href="{{.Permalink}}" class="a-block">
-            <div class="post-item-wrapper">
-                <article class="post-item post-item-no-divider">
-                    <div class="post-item-info-wrapper">
-                        <header class="post-item-title">
-                            <h1>{{.Title}}</h1>
-                            {{ with .Params.subtitle }}
-                            <p class="lead">{{ . }}</p>
-                            {{ end }}
-                        </header>
-                        <div class="post-item-summary">
-                            {{$desc}}
-                        </div>
-                        <div class="post-item-meta">
-                            <span class="reading-time">
-                                {{ partial "svg" (dict "iconName" "clock" "size" "18px")}}
-                                <span>{{ .ReadingTime }} {{ "minute" | pluralize }}</span>
-                            </span>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+          initial-scale=1.0" />
+    <title>{{ .Title }}</title>
+    <link rel="icon" href="favicon.svg" />
+    {{ partial "gallerydeluxe/head.html" . }}
+    {{ partial "ghead.html" . }}
+  </head>
 
-                            <time class="datePublished">
-                                {{ partial "svg" (dict "iconName" "calendar" "size" "18px")}}
-                                <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
-                            </time>
-                        </div>
-                    </div>
-                    {{ $featured_image := .Params.featured_image }}
-                    {{ if $featured_image }}
-                    <div class="post-item-image-wrapper">
-                        <div class="post-item-image"
-                             style="background-image: url('{{$featured_image | relLangURL }}')"></div>
-                    </div>
-                    {{ end }}
-                </article>
-            </div>
-            {{ end }}
-            {{ end }}
-            {{ end }}
-        </a>
+  <a class="logo" href="{{ site.Home.RelPermalink }}">
+    {{ partial "glogo.html" . }}
+  </a>
+
+  {{/* 'images' is a path to a leaf bundle with a index.md file and lots of JPG images. */}}
+  {{ $gallery := partial "gallerydeluxe/init.html" (dict "sourcePath" "images") }}
+  {{ $params := site.Params.gallerydeluxe }}
+  {{/* We currently only support 1 gallery per page, which is created by an element with id 'gallerydeluxe',
+    and a valid data url.
+  */}}
+  <body id="gallerydeluxe" data-gd-image-data-url="{{ $gallery.imageDataUrl }}">
+    <div id="gd-modal" class="gd-modal">
+      <span id="gd-modal-close" class="gd-modal-close">&times;</span>
+      {{ if $params.enable_exif }}
+        <div id="gd-modal-exif" class="gd-modal-exif"></div>
+      {{ end }}
     </div>
-</div>
-{{ end }}
+  </body>
+</html>
