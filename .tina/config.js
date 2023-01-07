@@ -1,12 +1,12 @@
 import { defineConfig } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
-const branch = "tinacms";
+const branch = "develop";
 
 export default defineConfig({
   branch,
   clientId: "65446e91-8e39-4c76-b232-a60340e867b0", // Get this from tina.io
-  token: "5737086b74fb4e6ffe7c29886fb40e940d9da2be", // Get this from tina.io
+  token: "c284168b9cec60515687cddf0fb40be7573ffaf4", // Get this from tina.io
   build: {
     outputFolder: "admin",
     publicFolder: "static",
