@@ -42,7 +42,7 @@ jobs:
           command: git submodule sync && git submodule update --init
       - run: 
           name: run hugo
-          command: HUGO_ENV=production hugo -v -s ~/hugo
+          command: HUGO_ENV=production npx tinacms build && hugo -v -s ~/hugo
           #-d $HUGO_BUILD_DIR
       - run:
           name: look at build
