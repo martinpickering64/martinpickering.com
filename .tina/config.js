@@ -30,6 +30,11 @@ export default defineConfig({
             date: new Date().toISOString()
           }
         },
+        ui: {
+          filename: {
+            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+          }
+        },
         fields: [
           {
             type: "string",
@@ -117,6 +122,18 @@ export default defineConfig({
         label: "Pages",
         name: "pages",
         path: "content",
+        format: "md",
+        defaultItem: () => {
+          return {
+            title: 'Well this is new!',
+            date: new Date().toISOString()
+          }
+        },
+        ui: {
+          filename: {
+            slugify: values => { return `${values.title.toLowerCase().replace(/\W+/g, '-')}` }
+          }
+        },
         fields: [
           {
             type: "string",
@@ -156,7 +173,7 @@ export default defineConfig({
             required: false
           },
         ],
-      },
+      }
     ],
   },
 });
