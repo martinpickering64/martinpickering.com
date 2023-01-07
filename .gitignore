@@ -70,3 +70,4 @@ node_modules/
 # Hugo build output directory
 public
 resources
+node_modules

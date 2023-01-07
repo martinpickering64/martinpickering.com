@@ -3,7 +3,10 @@
   "version": "2.1.0",
   "description": "martinpickering.com website",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@tinacms/cli": "^1.0.5",
+    "tinacms": "^1.1.2"
+  },
   "devDependencies": {
     "firebase-tools": "^11.17.0"
   },
