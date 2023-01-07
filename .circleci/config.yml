@@ -3,6 +3,10 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:0.108
+# The resource_class feature allows configuring CPU and RAM resources for each job.
+# Different resource classes are available for different executors.
+# https://circleci.com/docs/2.0/configuration-reference/#resourceclass   
+    resource_class: large
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
@@ -54,9 +58,4 @@ jobs:
 #            --empty-alt-ignore --disable-external
       - deploy:
           name: deploy to Firebase
-          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
-# The resource_class feature allows configuring CPU and RAM resources for each job.
-# Different resource classes are available for different executors.
-# https://circleci.com/docs/2.0/configuration-reference/#resourceclass   
-resource_class: large
-             
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"             
