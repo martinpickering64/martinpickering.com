@@ -1,11 +1,11 @@
-+++
-categories = "Food"
-date = 2022-01-06T15:07:59Z
-summary = "A recipe"
-tags = ["Bread"]
-title = "Spelt Bread"
+---
+categories: "Food"
+date: 2022-01-06T15:07:59Z
+summary: "A recipe"
+tags: ["Bread"]
+title: "Spelt Bread"
 
-+++
+---
 A Spelt Loaf made with a little whole-grain wheat flour to help make the dough a little more manageable and the results somewhat more consistent.
 
 * 350g Whole-grain Spelt Flour

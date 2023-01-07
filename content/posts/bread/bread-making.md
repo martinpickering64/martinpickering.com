@@ -1,11 +1,11 @@
-+++
-categories = "Food"
-date = 2022-01-06T13:28:25Z
-summary = "Making amazing bread at home"
-tags = ["bread"]
-title = "Bread Making"
+---
+categories: "Food"
+date: 2022-01-06T13:28:25Z
+summary: "Making amazing bread at home"
+tags: ["bread"]
+title: "Bread Making"
 
-+++
+---
 I've made bread at home on and off for about 28 years. For most of that time it was a loaf every other day from a Panasonic Breadmaker. The machine would be loaded with ingredients at bedtime and there would be a freshly baked loaf ready at breakfast time. Every now and then I would make a Bloomer or two from scratch.
 
 Then, about 15 years ago, I found out about San Francisco Sourdough and it sounded interesting and fun. I gave it a try. I failed. I persisted and I got better. I have continued making Sourdough Bread ever since. I have used the same starter colony for about 14 years now. She's been christened Victoria (_or Vicky_) and is an ever present part of our fridge, if not our family.

@@ -1,11 +1,11 @@
-+++
-categories = "Software"
-date = 2022-01-08T14:31:08Z
-summary = "What's in a name?"
-tags = ["herald", "SAAS"]
-title = "Herald"
+---
+categories: "Software"
+date: 2022-01-08T14:31:08Z
+summary: "What's in a name?"
+tags: ["herald", "SAAS"]
+title: "Herald"
 
-+++
+---
 I have elected to use the name "Herald" for my SAAS Starter Kit project.
 
 I _mostly_ arrived at this name having looked at the definition of herald in the [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/herald)

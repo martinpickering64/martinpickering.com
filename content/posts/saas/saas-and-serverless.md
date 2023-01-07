@@ -1,11 +1,11 @@
-+++
-categories = "Software"
-date = 2022-01-08T14:40:42Z
-summary = "Is serverless a good fit for SAAS?"
-tags = ["herald", "Cloud", "SAAS"]
-title = "SAAS and Serverless"
+---
+categories: "Software"
+date: 2022-01-08T14:40:42Z
+summary: "Is serverless a good fit for SAAS?"
+tags: ["herald", "Cloud", "SAAS"]
+title: "SAAS and Serverless"
 
-+++
+---
 Whilst thinking about my side-project (_that I have christened_ [_Herald_](../herald)), I have considered several topics and one is concerned with the fit of serverless paradigms and in particular Azure Serverless Functions.
 
 My experience of creating and living with a SAAS Product has shown me that there is a lot of energy expended in trying to anticipate tenant activity and resource demands, whilst at the same time minimising the size of the invoice from the Cloud Service Provider. 

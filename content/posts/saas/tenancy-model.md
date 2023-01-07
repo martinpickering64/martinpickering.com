@@ -1,11 +1,11 @@
-+++
-categories = "Software"
-date = 2022-01-19T13:29:28Z
-summary = "Herald's tenancy model"
-tags = ["herald", "SAAS"]
-title = "Tenancy Model"
+---
+categories: "Software"
+date: 2022-01-19T13:29:28Z
+summary: "Herald's tenancy model"
+tags: ["herald", "SAAS"]
+title: "Tenancy Model"
 
-+++
+---
 ![Shows shared and silo tenants](/uploads/tenancymodel.svg "The Herald Tenancy Model")
 
 As herald is the executive services for a SAAS Product, herald is not a multi-tenant deployment. However, it is the supervisor for the SAAS Product, which is multi-tenant. Therefore, herald must be somewhat opinionated about the SAAS Product tenancy models that it is willing to work alongside.

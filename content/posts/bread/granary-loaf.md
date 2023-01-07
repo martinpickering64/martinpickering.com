@@ -1,11 +1,11 @@
-+++
-categories = "Food"
-date = 2022-01-06T14:24:38Z
-summary = "Bread made from malted wheat"
-tags = ["Bread"]
-title = "Granary Loaf"
+---
+categories: "Food"
+date: 2022-01-06T14:24:38Z
+summary: "Bread made from malted wheat"
+tags: ["Bread"]
+title: "Granary Loaf"
 
-+++
+---
 This is not a sourdough recipe as it uses conventional fast action bread yeast to leaven the bread. It is my favorite bread to have with cheese.
 
 * 500g Granary or Malted Wheat flour

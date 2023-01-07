@@ -1,11 +1,11 @@
-+++
-categories = "Food"
-date = 2022-01-06T13:50:02Z
-summary = "A short recipe..."
-tags = ["Bread"]
-title = "My usual Sourdough Loaf"
+---
+categories: "Food"
+date: 2022-01-06T13:50:02Z
+summary: "A short recipe..."
+tags: ["Bread"]
+title: "My usual Sourdough Loaf"
 
-+++
+---
 My most regularly made loaf is a pretty simple sourdough loaf. It is a three day process for me.
 
 ## Day one (_evening_)

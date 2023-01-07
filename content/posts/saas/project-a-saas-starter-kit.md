@@ -1,11 +1,11 @@
-+++
-categories = "Software"
-date = 2021-12-05T14:09:18Z
-summary = "My current side project"
-tags = ["herald", "Cloud", "Azure", "SAAS"]
-title = "Project: A SAAS Starter Kit"
+---
+categories: "Software"
+date: 2021-12-05T14:09:18Z
+summary: "My current side project"
+tags: ["herald", "Cloud", "Azure", "SAAS"]
+title: "Project: A SAAS Starter Kit"
 
-+++
+---
 I have had the pleasure to create a small number of _limited_ SAAS Projects/Products in the past. They have been fine, even great, but the process of doing so has left me somewhat unsatisfied. I was left thinking there was:
 
 * too many manual day-to-day procedures to keep the lights on

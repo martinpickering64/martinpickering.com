@@ -1,11 +1,11 @@
-+++
-categories = "Food"
-date = 2022-01-06T14:42:59Z
-summary = "A little about Spelt Flour..."
-tags = ["Bread"]
-title = "Spelt Grain"
+---
+categories: "Food"
+date: 2022-01-06T14:42:59Z
+summary: "A little about Spelt Flour..."
+tags: ["Bread"]
+title: "Spelt Grain"
 
-+++
+---
 The history of Spelt is long and involved. 
 
 It is a species of wheat that is likely to be a naturally occurring hybrid of Emmer Wheat and wild goat-grass. Genetic evidence hints at the hybridisation taking place in the Middle East, probably more than 8,000 years ago. There is recent DNA evidence that would indicate that European Spelt might have a separate origin to the Near-Eastern Spelt.

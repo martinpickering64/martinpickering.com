@@ -1,13 +1,13 @@
-+++
-categories = "Software"
-date = 2022-01-04T00:00:00Z
-description = "What stuff is involved in creating and maintaining this website?"
-images = []
-summary = "What is this website made up of?"
-tags = ["Website"]
-title = "What makes up this website"
+---
+categories: "Software"
+date: 2022-01-04T00:00:00Z
+description: "What stuff is involved in creating and maintaining this website?"
+images: []
+summary: "What is this website made up of?"
+tags: ["Website"]
+title: "What makes up this website"
 
-+++
+---
 This website is, _what I believe is known as_, a static website. In that it has no active content generated on demand by some back-end service.
 
 I have made use of [HUGO](https://gohugo.io/) to assist in the creation and management of the websites content. [HUGO](https://gohugo.io/about/what-is-hugo/) is a popular open-source static site generator and uses a combination of its own CLI, Markdown and GO to achieve its objective. 

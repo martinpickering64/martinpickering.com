@@ -1,11 +1,11 @@
-+++
-categories = "Food"
-date = 2022-01-07T11:59:17Z
-summary = "What flour do I use (mostly)..."
-tags = ["Bread"]
-title = "Flour"
+---
+categories: "Food"
+date: 2022-01-07T11:59:17Z
+summary: "What flour do I use (mostly)..."
+tags: ["Bread"]
+title: "Flour"
 
-+++
+---
 One of my core values is that I place emphasis on local producers and local produce. This influences many of my choices in life and especially food. In respect of flour this has meant that I have searched out a local miller of Bread Flour. Turns out that they are super local, only 15 minutes by bike.
 
 ## Walk Mill

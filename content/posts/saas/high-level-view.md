@@ -1,11 +1,11 @@
-+++
-categories = "Software"
-date = 2022-01-19T17:13:57Z
-summary = "An aerial view of herald"
-tags = ["SAAS", "herald"]
-title = "High-level View"
+---
+categories: "Software"
+date: 2022-01-19T17:13:57Z
+summary: "An aerial view of herald"
+tags: ["SAAS", "herald"]
+title: "High-level View"
 
-+++
+---
 **Review**: herald is the name I have given to a SAAS Starter Kit. The kit does not implement a SAAS Product, instead it provides the encompassing elements that are common to any SAAS product. There is a series of articles about herald, and more on their way, that can be tracked down by looking at the [herald tag on this website](/tags/herald).
 
 The following diagram presents a high-level view of herald.
