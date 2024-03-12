@@ -2,7 +2,9 @@
  "compilerOptions": {
   "baseUrl": ".",
   "paths": {
-   "*": null
+   "*": [
+    "../../../.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/bep/gallerydeluxe@v0.8.1/assets/*"
+   ]
   }
  }
 }
