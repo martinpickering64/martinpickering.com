@@ -59,5 +59,4 @@ jobs:
 #            --empty-alt-ignore --disable-external
       - deploy:
           name: deploy to Firebase
-          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
-#          command: ./node_modules/.bin/firebase use martinpickering-com && ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"             
+          command: ./node_modules/.bin/firebase use martinpickering-com && ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"             
